@@ -1,20 +1,20 @@
 type:     "solo"
 chapter:  2
 title:
-	>	\i Chapter 1 
-	|	\iEasy Street
+	>	\i Capítulo 1
+	|	\iVia Rapida
 players:
 	*	type:           "human"
 		race:           "ish"
-		name:           "The Human/Ishiman Cooperative"
+		name:           "Cooperación Humana Ishiman"
 		earning_power:  1.0
 	*	type:           "cpu"
 		race:           "gai"
-		name:           "The Gaitori Union"
+		name:           "La Unión Gaitori"
 		earning_power:  1.0
 status:
-	*	text:       "Destroy all 5"
-	*	text:       "transports."
+	*	text:       "Desturye los 5"
+	*	text:       "transportes."
 		underline:  true
 	*	prefix:     "Remaining: "
 		minuend:    5
@@ -119,10 +119,10 @@ conditions:
 				player:  0
 				next:    "tut2"
 				text:
-					>	You destroyed all five Gaitori transports, preventing any reinforcements
-					>	from reaching the Gaitori base.
+					>   Has destruido los cinco transportes Gaitori, impidiendo que llegaran 
+					>   refuerzos a la base Gaitori.
 briefings:
-	*	title:  "Charon System"
+	*	title:  "Sistema Charon"
 		content:
 			>	Welcome to your first combat mission, humans. In the Charon System, the
 			>	Gaitori have just established a new base near our space. A small convoy

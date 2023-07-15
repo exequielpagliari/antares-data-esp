@@ -1,1 +1,15 @@
-15/07/2023:  Se inicia el proyecto de traducción del juego Ares. Se utilizará el repositorio del proyecto Antares como fork para su implementación. 
+15/07/2023:  Se inicia el proyecto de traducción del juego Ares. Se utilizará el repositorio del proyecto Antares como fork para su implementación.
+
+The Human/Ishiman Cooperative --->  Cooperación Humana Ishiman
+The Gaitori Union --->  La Unión Gaitori
+
+Destroy all 5	--->	Desturye los 5
+transports	--->	transportes 
+
+>	You destroyed all five Gaitori transports, preventing any reinforcements	--->	>   Has destruido los cinco transportes Gaitori, impidiendo que llegaran
+
+
+>	from reaching the Gaitori base.	--->	>   refuerzos a la base Gaitori
+
+
+"System Charon"	--->	"Systema Charon".
