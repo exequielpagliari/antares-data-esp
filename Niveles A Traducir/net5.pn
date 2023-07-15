@@ -1,0 +1,149 @@
+type:  "net"
+title:
+	>	\i Location, Location, Location 
+	|	\i 
+players:
+	*	type:  "human"
+		races:
+			*	"ish"
+			*	"can"
+			*	"gai"
+		earning_power:  1.0
+	*	type:           "human"
+		races:
+			*	"ish"
+			*	"can"
+			*	"gai"
+		earning_power:  1.0
+song:  "technobee"
+initials:
+	*	base:   "loc/planet"
+		owner:  0
+		at:     {x: 0, y: 10000}
+		override:
+			name:  "Xamer Alpha"
+		earning:  1.0
+		build:
+			*	"cruiser"
+			*	"gunship"
+			*	"aslttran"
+			*	"carrier"
+			*	"hvd"
+			*	"transport"
+	*	base:   "loc/planet"
+		owner:  1
+		at:     {x: 0, y: -10000}
+		override:
+			name:  "Xamer Beta"
+		earning:  1.0
+		build:
+			*	"cruiser"
+			*	"gunship"
+			*	"aslttran"
+			*	"carrier"
+			*	"hvd"
+			*	"transport"
+	*	base:    "carrier"
+		owner:   0
+		at:      {x: 256, y: 10000}
+		target:  {initial: 0}
+	*	base:    "carrier"
+		owner:   0
+		at:      {x: -256, y: 10000}
+		target:  {initial: 0}
+	*	base:    "carrier"
+		owner:   0
+		at:      {x: 0, y: 10256}
+		target:  {initial: 0}
+	*	base:    "carrier"
+		owner:   1
+		at:      {x: -256, y: -10000}
+		target:  {initial: 1}
+	*	base:    "carrier"
+		owner:   1
+		at:      {x: 256, y: -10000}
+		target:  {initial: 1}
+	*	base:    "carrier"
+		owner:   1
+		at:      {x: 0, y: -10256}
+		target:  {initial: 1}
+	*	base:    "loc/outpost"
+		at:      {x: 0, y: 0}
+		override:
+			name:  "Bunker Station"
+		earning:  0.25
+	*	base:     "loc/outpost"
+		at:       {x: -700, y: 0}
+		override:
+			name:  "Outpost C1"
+		earning:  0.25
+	*	base:     "loc/outpost"
+		at:       {x: 700, y: 0}
+		override:
+			name:  "Outpost C2"
+		earning:  0.25
+	*	base:     "loc/outpost"
+		at:       {x: 0, y: -700}
+		override:
+			name:  "Outpost C3"
+		earning:  0.25
+	*	base:     "loc/outpost"
+		at:       {x: 0, y: 700}
+		target:   {initial: 0}
+		override:
+			name:  "Outpost C4"
+		earning:  0.25
+	*	base:     "loc/flak"
+		at:       {x: -700, y: -700}
+	*	base:     "loc/flak"
+		at:       {x: 700, y: -700}
+	*	base:     "loc/flak"
+		at:       {x: -700, y: 700}
+	*	base:     "loc/flak"
+		at:       {x: 700, y: 700}
+	*	base:     "loc/outpost"
+		at:       {x: 0, y: 5000}
+		override:
+			name:  "Outpost Alpha"
+		earning:  0.25
+		build:
+			*	"engineer"
+	*	base:  "loc/outpost"
+		at:    {x: 0, y: -5000}
+		override:
+			name:  "Outpost Beta"
+		earning:  0.25
+		build:
+			*	"engineer"
+conditions:
+	*	when:
+			type:    "owner"
+			op:      "eq"
+			object:  {initial: 8}
+			player:  0
+		subject:  {initial: 8}
+		action:
+			*	type:       "win"
+				reflexive:  true
+				player:     0
+				text:
+					>	Player 1 captured the center base.
+	*	when:
+			type:    "owner"
+			op:      "eq"
+			object:  {initial: 8}
+			player:  1
+		subject:  {initial: 8}
+		action:
+			*	type:       "win"
+				reflexive:  true
+				player:     1
+				text:
+					>	Player 2 captured the center base.
+description:
+	>	Capture the center base first. It's surrounded by flak drones and
+	>	outposts. Engineering pods can only be built at peripheral outposts.
+own_no_ships:
+	>	All of your ships have been destroyed.
+foe_no_ships:
+	>	All of your opponent's ships have been destroyed.

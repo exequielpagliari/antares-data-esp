@@ -1,0 +1,304 @@
+type:     "solo"
+chapter:  15
+title:
+	>	\i Chapter 12 
+	|	\iMake Way
+players:
+	*	type:           "human"
+		race:           "ish"
+		name:           "The Human/Ishiman Cooperative"
+		earning_power:  1.0
+	*	type:           "cpu"
+		race:           "can"
+		name:           "The Cantharan Order"
+		earning_power:  3.0
+status:
+	*	text:       "Capture Fansi"
+	*	text:       "Beta"
+		underline:  true
+	*	text:       "Ensure safety"
+	*	text:       "of 5 cargo ships"
+		underline:  true
+	*	text:       ""
+	*	prefix:     "Docked: "
+		counter:    {player: 0, which: 0}
+		suffix:     "/5"
+song:  "yesterday"
+initials:
+	*	base:   "loc/shipyard"
+		owner:  0
+		at:     {x: -14609, y: -14259}
+		override:
+			name:  "Orbital Shipyard"
+	*	base:      "uns/etc/bttlship"
+		owner:     0
+		at:        {x: -14609, y: -14259}
+		hide:      true
+	*	base:      "ish/cruiser"
+		owner:     0
+		at:        {x: -21999, y: -15478}
+		flagship:  true
+		target:    {initial: 9}
+	*	base:      "ish/etc/cargo"
+		owner:     0
+		at:        {x: 0, y: 4347}
+		hide:      true
+		target:    {initial: 0, lock: true}
+	*	base:      "loc/bunker"
+		at:        {x: 3821, y: 9473}
+		target:    {lock: true}
+		override:
+			name:  "Bunker Station 2"
+		earning:  0.75
+	*	base:     "ish/etc/cargo"
+		owner:    0
+		at:       {x: 0, y: 4347}
+		hide:     true
+		target:   {initial: 0, lock: true}
+	*	base:     "ish/etc/cargo"
+		owner:    0
+		at:       {x: 0, y: 4347}
+		hide:     true
+		target:   {initial: 0, lock: true}
+	*	base:     "ish/etc/cargo"
+		owner:    0
+		at:       {x: 0, y: 4347}
+		hide:     true
+		target:   {initial: 0, lock: true}
+	*	base:     "ish/etc/cargo"
+		owner:    0
+		at:       {x: 0, y: 4347}
+		hide:     true
+		target:   {initial: 0, lock: true}
+	*	base:     "loc/planet"
+		owner:    0
+		at:       {x: -11133, y: -18088}
+		override:
+			name:    "Fansi Alpha"
+			sprite:  "loc/planets/redwhite-excitement"
+		earning:  1.0
+		build:
+			*	"fighter"
+			*	"cruiser"
+			*	"gunship"
+			*	"transport"
+			*	"engineer"
+			*	"aslttran"
+	*	base:   "loc/planet"
+		owner:  1
+		at:     {x: 22957, y: 43826}
+		override:
+			name:    "Fansi Beta"
+			sprite:  "loc/planets/cloudtones"
+		earning:  1.0
+		build:
+			*	"fighter"
+			*	"cruiser"
+			*	"gunship"
+			*	"transport"
+			*	"engineer"
+			*	"aslttran"
+	*	base:  "loc/bunker"
+		at:    {x: 695, y: 3826}
+		override:
+			name:  "Bunker Station 1"
+		earning:  0.75
+	*	base:     "can/carrier"
+		owner:    1
+		at:       {x: 20173, y: 4173}
+	*	base:     "loc/flak"
+		at:       {x: -2346, y: 956}
+	*	base:     "loc/flak"
+		owner:    1
+		at:       {x: 6935, y: 14868}
+	*	base:     "can/aslttran"
+		owner:    1
+		at:       {x: 21913, y: 8000}
+		target:   {initial: 11, lock: true}
+	*	base:     "can/aslttran"
+		owner:    1
+		at:       {x: 18086, y: 2434}
+		target:   {initial: 4, lock: true}
+conditions:
+	*	when:
+			type:      "time"
+			op:        "ge"
+			duration:  "5m"
+		action:
+			*	type:       "message"
+				reflexive:  true
+				pages:
+					*	>	\i INCOMING TRANSMISSION \i SECURE KEY OK - NW3 TIGHT BEAM
+						|	SOURCE: Human/Ishiman Coord. Control
+						|	The five freighters are preparing to enter the Fansi System. Remember
+						>	they'll be exiting the jump gate near Bunker Station 1, so it's
+						>	important that you maintain control of the station and its flak drone.
+						>	The first freighter will arrive in two minutes, and the others will
+						>	follow with a minute between each of them.\i<EOT>\i 
+			*	type:       "delay"
+				duration:   "20s"
+			*	type:       "reveal"
+				reflexive:  true
+				initial:    [3]
+			*	type:       "delay"
+				duration:   "20s"
+			*	type:       "reveal"
+				reflexive:  true
+				initial:    [5]
+			*	type:       "delay"
+				duration:   "20s"
+			*	type:       "reveal"
+				reflexive:  true
+				initial:    [6]
+			*	type:       "delay"
+				duration:   "20s"
+			*	type:       "reveal"
+				reflexive:  true
+				initial:    [7]
+			*	type:       "delay"
+				duration:   "20s"
+			*	type:       "reveal"
+				reflexive:  true
+				initial:    [8]
+	*	when:
+			type:     "score"
+			op:       "eq"
+			counter:  {player: 0, which: 0}
+			value:    5
+		action:
+			*	type:       "reveal"
+				reflexive:  true
+				initial:    [1]
+			*	type:       "message"
+				reflexive:  true
+				pages:
+					*	>	\i INCOMING TRANSMISSION \i SECURE KEY OK - NW3 TIGHT BEAM
+						|	SOURCE: Human/Ishiman Coord. Control
+						|	Construction on the Obish destroyer has been completed. The destroyer is
+						>	available for your use at the Fansi Orbital Shipyard.\i<EOT>\i 
+	*	when:
+			type:    "owner"
+			op:      "eq"
+			object:  {initial: 9}
+			player:  1
+		subject:  {initial: 9}
+		action:
+			*	type:    "win"
+				player:  1
+				text:
+					>	The Cantharan Order landed a transport on our base on Fansi Alpha.
+	*	when:
+			type:    "owner"
+			op:      "eq"
+			object:  {initial: 10}
+			player:  0
+		subject:  {initial: 10}
+		action:
+			*	type:    "win"
+				player:  0
+				next:    "ch13"
+				text:
+					>	You captured the Cantharan base on Fansi Beta.
+briefings:
+	*	title:  "Fansi"
+		content:
+			>	The Fansi System was once the front line Gaitori base of operations in
+			>	Obish space during the Gaitori/Obish War. Today it's the last outpost of
+			>	the Gaitori Isolationists--one of the few enemies of both Cantharis and
+			>	Obain. It's also the last military obstacle between you and Cantharan
+			>	Space.
+			>
+			>	The Cantharans intend to capture the Fansi System. Your objective is to
+			>	beat them to it.
+	*	initial:  0
+		title:    "Orbital Shipyard"
+		content:
+			>	^Pbrf/shipyard^Part of the Fansi System's value is its orbital shipyard.
+			>	The Gaitori Isolationists haven't had the resources to make use of it,
+			>	but there's a remnant of the Gaitori/Obish war here--a partially
+			>	constructed Obish destroyer, built during Obain's brief occupation of
+			>	the system near the end of the war. We will be completing the
+			>	destroyer's construction for this mission.
+	*	initial:  11
+		title:    "Cargo Ship"
+		content:
+			>	^Pish/etc/cargo^To complete the construction of the Obish destroyer
+			>	during the mission, five cargo ships will be exiting through a jump gate
+			>	here. All five cargo ships must make it to the orbital shipyard in order
+			>	for us to complete the destroyer. We'll alert you when the cargo ships
+			>	are due to drop in-system, but it'll be up to you to make sure their
+			>	path is clear.
+	*	initial:  13
+		title:    "Flak Drone"
+		content:
+			>	^Ploc/flak^Send engineering pods to this flak drone to reconfigure it to
+			>	fire on enemy vessels. The Gaitori Isolationists currently have it set
+			>	to fire on all ships. Make sure you have control of it before the cargo
+			>	ships arrive.
+	*	initial:  11
+		title:    "Bunker Station 1"
+		content:
+			>	^Ploc/bunker^This is one of two bunker stations in the Fansi system,
+			>	both of which are occupied by Gaitori Isolationists. The bunker stations
+			>	have powerful armament, but their defenses can be knocked out using
+			>	heavy fire to reduce their shields.
+			>
+			>	Use assault transports to gain control of the bunker stations--occupying
+			>	the stations will generate resources for you during the mission.
+	*	initial:  4
+		title:    "Bunker Station 2"
+		content:
+			>	^Ploc/bunker^This is the other bunker station. If the Cantharans gain
+			>	control of both the stations, they will most likely overwhelm you.
+	*	initial:  9
+		title:    "Fansi Alpha"
+		content:
+			>	We've set up a base of operations here on Fansi Alpha, where you'll be
+			>	able to produce a variety of ships. As usual, allowing the enemy to land
+			>	a transport here will force us to abort the mission.
+	*	initial:  9
+		title:    "Engineer Pod"
+		content:
+			>	In addition to fighters, cruisers, gunships, and transports, the base on
+			>	Fansi can produce two special-purpose ships.
+			|	^Pish/engineer^Build engineering pods to gain control of the flak
+			>	drones. Make sure you commandeer the flak drone that lies between Bunker
+			>	Station 1 and the orbital shipyard, to ensure the safe passage of the
+			>	freighters.
+	*	initial:  9
+		title:    "Assault Transport"
+		content:
+			>	^Pish/aslttran^Assault Transports are the only ships designed to gain
+			>	control of bunker stations. Our assault transports carry twelve
+			>	extravehicular assault troopers. Six EVA troopers can exit the transport
+			>	at once, and the assault transport will automatically dispatch them when
+			>	it arrives at a hostile barrack station. At least five troopers must
+			>	enter the station to control it.
+	*	initial:  10
+		title:    "Fansi Beta"
+		content:
+			>	The Cantharan base on Fansi Beta is your ultimate goal. Land a standard
+			>	transport here to complete the mission. The Cantharans have ship
+			>	building facilities equivalent to ours.
+			|	^Pcan/aslttran^In addition to fighters, cruisers, transports, and
+			>	gunships, the Cantharans have assault transports of their own. Destroy
+			>	them, and the EVA Troopers they release.
+	*	initial:  10
+		title:    "Engineer Pod"
+		content:
+			>	^Pcan/engineer^Cantharan engineering pods, like our own, are equipped
+			>	with defensive repulser beam cannons.
+	*	initial:  12
+		title:    "Carrier"
+		content:
+			>	^Pcan/carrier^The Cantharan carrier the Song of Zom is already in the
+			>	Fansi system. Its missiles are very effective against the bunker
+			>	stations' defenses.
+starmap:  {left: 243, top: 146, right: 275, bottom: 170}
+par:
+	time:    "15m"
+	kills:   10
+	losses:  20
+no_ships:
+	>	You have no ships with which to fight. The Cantharans control the
+	>	system, and your quest is stopped short.

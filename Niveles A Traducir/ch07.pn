@@ -1,0 +1,238 @@
+type:     "solo"
+chapter:  10
+title:
+	>	\i Chapter 7 
+	|	\iOn the Rocks
+players:
+	*	type:  "human"
+		race:  "ish"
+		name:  "The Human/Ishiman Cooperative"
+	*	type:  "cpu"
+		race:  "can"
+		name:  "The Cantharan Order"
+status:
+	*	text:       "Collect 4"
+	*	text:       "asteroid samples"
+		underline:  true
+	*	prefix:     "Collected: "
+		counter:    {player: 0, which: 1}
+		suffix:     "/4"
+song:  "yesterday"
+initials:
+	*	base:    "can/hvc"
+		owner:   1
+		at:      {x: -22129, y: -17913}
+	*	base:    "ish/etc/astrominer"
+		owner:   0
+		at:      {x: -2696, y: 4347}
+		target:  {initial: 5}
+	*	base:    "ast/otr/big"
+		owner:   1
+		at:      {x: -8000, y: -8800}
+		override:
+			name:  "Asteroid IR7-7e"
+		earning:  1.0
+	*	base:     "loc/planet"
+		owner:    0
+		at:       {x: -4000, y: 3000}
+		override:
+			name:    "Philemon Beta"
+			sprite:  "loc/planets/marslike"
+		earning:  1.0
+	*	base:     "loc/sun"
+		at:       {x: 200, y: -200}
+		override:
+			name:  "Philemon"
+	*	base:      "ish/hvc"
+		owner:     0
+		at:        {x: -3678, y: 3497}
+		flagship:  true
+	*	base:      "can/schooner"
+		owner:     1
+		at:        {x: -6978, y: -8804}
+		target:    {initial: 2, lock: true}
+	*	base:      "can/gunship"
+		owner:     1
+		at:        {x: -11760, y: -17673}
+		hide:      true
+		target:    {initial: 1, lock: true}
+	*	base:      "can/schooner"
+		owner:     1
+		at:        {x: -10543, y: -17325}
+		hide:      true
+		target:    {initial: 7, lock: true}
+	*	base:      "can/schooner"
+		owner:     1
+		at:        {x: -11673, y: -16021}
+		hide:      true
+		target:    {initial: 7, lock: true}
+conditions:
+	*	when:
+			type:      "time"
+			op:        "ge"
+			duration:  "3s"
+		action:
+			*	type:  "message"
+				pages:
+					*	>	\i INCOMING TRANSMISSION \i SECURE KEY OK - NW3 TIGHT BEAM
+						|	SOURCE: RICS 681121 Astrominer
+						|	Welcome to the Philemon System, humans. We have been assured that you
+						>	won’t allow our miner to be damaged. Please see that it isn’t. We await
+						>	your orders. \i<EOT>\i 
+	*	when:
+			type:     "score"
+			op:       "eq"
+			counter:  {player: 0, which: 1}
+			value:    1
+		action:
+			*	type:      "delay"
+				duration:  "2s"
+			*	type:      "message"
+				pages:
+					*	>	\i INCOMING TRANSMISSION \i SECURE KEY OK - NW3 TIGHT BEAM
+						|	SOURCE: Human/Ishiman Coord. Control
+						|	We’ve just confirmed that three hostile vessels are approaching this
+						>	system: a Cantharan gunship and two schooner escorts. Prevent them from
+						>	interfering with your retrieval of the asteroid samples. \i<EOT>\i 
+			*	type:     "reveal"
+				initial:  [7, 8, 9]
+	*	when:
+			type:     "score"
+			op:       "eq"
+			counter:  {player: 0, which: 1}
+			value:    4
+		action:
+			*	type:    "win"
+				player:  0
+				next:    "ch08"
+				text:
+					>	You captured enough samples of the artificial asteroid for a thorough
+					>	analysis.
+	*	persistent:  true
+		when:
+			type:     "score"
+			op:       "eq"
+			counter:  {player: 1, which: 1}
+			value:    7
+		action:
+			*	type:    "win"
+				player:  1
+				text:
+					>	DEBUG Chapter 8, computer wins.
+					|	Computer got enough asteroid fragments that player could never win (this
+					>	should never happen).
+briefings:
+	*	initial:  2
+		title:    "Asteroid IR7-7e"
+		content:
+			>	The miners in this system alerted us when they detected a Cantharan ship
+			>	pursuing a rogue asteroid.
+			|	^Pbrf/asteroid^Our preliminary analysis suggests that the asteroid has
+			>	been artificially manufactured.
+	*	initial:  2
+		title:    "Asteroid IR7-7e"
+		content:
+			>	^Pbrf/los-ran^Its trajectory indicates that it originated in the Los Ran
+			>	system, and we believe it may be a remnant of the ancient Boodan War of
+			>	Cantharis. 
+	*	initial:  2
+		title:    "Asteroid IR7-7e"
+		content:
+			>	The Cantharans' interest in this asteroid is alarmingly peculiar. We
+			>	intend to destroy it, but we'd like to collect some samples to determine
+			>	its purpose.
+			|	^Past/regular/big^You must break the asteroid into pieces small enough
+			>	to be collected. We require a minimum of four samples of its debris.
+	*	initial:  1
+		title:    "Astrominer"
+		content:
+			>	^Pish/etc/astrominer^The astrominer has been ordered to follow you.
+			>	Guide it to the asteroid and the astrominer will attempt to break it
+			>	apart. The miner’s bulky appearance belies its vulnerability to weapons
+			>	fire. Protect it from attack: it is not a military vessel.
+			|	The astrominer is equipped with two short-range non-concussive solitoid
+			>	cannons, which will gradually weaken the asteroid's structure.
+	*	initial:  5
+		title:    "Philemon Beta"
+		content:
+			>	^Pish/hvc^A single heavy cruiser should be a sufficient escort for the
+			>	astrominer. If the cruiser is destroyed, you may attempt to complete the
+			>	mission without it, but the astrominer is almost incapable of defending
+			>	itself.
+	*	initial:  6
+		title:    "Schooner"
+		content:
+			>	^Pcan/schooner^This Cantharan schooner has pursued the artificial
+			>	asteroid to the Philemon System. The schooner is extremely agile, but is
+			>	minimally armed.
+	*	initial:  0
+		title:    "Heavy Cruiser"
+		content:
+			>	^Pcan/hvc^A heavy cruiser has also been detected near the asteroid. It
+			>	will probably attempt to intercept you.
+	*	title:  "Philemon"
+		content:
+			>	If the asteroid has any significance to the Cantharans, you can expect
+			>	that the Order has already dispatched reinforcements. Be prepared.
+starmap:  {left: 385, top: 212, right: 417, bottom: 236}
+par:
+	time:    "3m"
+	kills:   2
+	losses:  0
+prologue:
+	>	#+Blog/starfield/b
+	|	\i PART 2 
+	|	\i 
+	|	#+
+	|	With the Gaitori threat behind you, you turn your eyes to the principle
+	>	enemy of your race: the Cantharan Order, servants to the Prophets and
+	>	Crusaders against the Unenlightened.
+	>
+	>	#+can/race
+	|	Centuries ago, the Cantharan Order, then a stable if inflexible defender
+	>	of interstellar peace, was plunged into chaos by the Boodan Civil War.
+	>	Although the Order prevailed, it was greatly changed by the conflict.
+	>	Soon after the Order began its crusades, with its zealous devotion to
+	>	the twin gods Zom and Doz fueling its thirst for conquest. One among the
+	>	dozens of “primitive” worlds to fall under Cantharan rule was Earth.
+	>
+	>	#+
+	|	The Cantharan frontier is a thick swatch the Cantharans cut from the
+	>	formerly free trading corridor that connected the Bazidanese Star
+	>	League, the Ishiman Stellar Protectorate, the Elejeetian Empire, the
+	>	Gaitori Union, and Obain. Once the Order’s crusades began to make trade
+	>	in this corridor a risky and unprofitable practice, the races withdrew
+	>	into their separate systems, none of them prepared to challenge the
+	>	might of the Cantharan military force.
+	>
+	>	#+
+	|	You now must face that force. With the help of the Ishimans, you prepare
+	>	to make a quick, decisive strike directly into the frontier. With speed
+	>	and surprise still on your side, you hope to bisect the frontier and
+	>	reach into Cantharan space before the Order has time to react.
+epilogue:
+	>	#+Blog/starfield/b
+	|	The Ishimans’ initial analysis of the rogue asteroid was correct: it was
+	>	artificially created, and originated in the Cantharan system of Los Ran
+	>	during the Boodan War. Further examination of the samples you retrieved
+	>	reveals a sinister secret.
+	>
+	>	#+
+	|	The asteroid was saturated with a biomechanical virus, apparently
+	>	designed to lie dormant within the asteroid until it collided with a
+	>	living planet. The artificial virus, millions of tiny mechanisms, would
+	>	then activate and seek out compatible life which it could infest.
+	>
+	>	#+
+	|	A relic of the Boodan war, the biomechanisms could have been some kind
+	>	of weapon, but the method of distribution--on artificial
+	>	asteroids--would have been too slow for any tactical use. Its purpose is
+	>	obscure.
+	|	#+
+	|	This Boodan Mechanism is beyond any known races’ ability. The
+	>	ramifications of its discovery this far from Cantharis are staggering.
+	>	It now seems the Cantharan Crusades have more to do with hunting down
+	>	and harnessing this virus than they do with obliteration of the
+	>	“Unenlightened.”
+no_ships:
+	>	You lost your ship. The significance of the asteroid remains a mystery.

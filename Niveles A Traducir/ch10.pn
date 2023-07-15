@@ -1,0 +1,174 @@
+type:     "solo"
+chapter:  13
+title:
+	>	\i Chapter 10 
+	|	\iAssassin
+players:
+	*	type:           "human"
+		race:           "ish"
+		name:           "The Human/Ishiman Cooperative"
+	*	type:           "cpu"
+		race:           "can"
+		name:           "The Cantharan Order"
+		earning_power:  0.008
+status:
+	*	text:       "Destroy all"
+	*	text:       "hostile ships"
+		underline:  true
+song:  "technobee"
+initials:
+	*	base:      "ish/hvc"
+		owner:     0
+		at:        {x: 1565, y: 6521}
+		flagship:  true
+		target:    {initial: 6}
+	*	base:      "loc/sun"
+		at:        {x: 1913, y: -2086}
+	*	base:      "ish/cruiser"
+		owner:     0
+		at:        {x: 956, y: 7565}
+		target:    {initial: 6}
+	*	base:      "ish/fighter"
+		owner:     0
+		at:        {x: 1913, y: 8086}
+		target:    {initial: 6}
+	*	base:      "ish/fighter"
+		owner:     0
+		at:        {x: 2173, y: 7391}
+		target:    {initial: 6}
+	*	base:      "obi/escort"
+		owner:     0
+		at:        {x: 521, y: 6782}
+		target:    {initial: 6}
+	*	base:      "ish/carrier"
+		owner:     0
+		at:        {x: 2434, y: 6782}
+	*	base:      "ish/hvc"
+		owner:     0
+		at:        {x: 2782, y: 8521}
+		target:    {initial: 6}
+	*	base:      "obi/escort"
+		owner:     0
+		at:        {x: 2956, y: 7739}
+		target:    {initial: 6}
+	*	base:      "ish/fighter"
+		owner:     0
+		at:        {x: 1043, y: 8782}
+		target:    {initial: 6}
+	*	base:      "can/hvc"
+		owner:     1
+		at:        {x: 1478, y: 1826}
+		target:    {initial: 17, lock: true}
+	*	base:      "can/hvc"
+		owner:     1
+		at:        {x: 2869, y: 1913}
+		target:    {initial: 17, lock: true}
+	*	base:      "can/cruiser"
+		owner:     1
+		at:        {x: 1130, y: 1130}
+		target:    {initial: 17, lock: true}
+	*	base:      "gai/cruiser"
+		owner:     1
+		at:        {x: 2260, y: 956}
+		target:    {initial: 17, lock: true}
+	*	base:      "gai/cruiser"
+		owner:     1
+		at:        {x: 3217, y: 1391}
+		target:    {initial: 17, lock: true}
+	*	base:      "loc/planet"
+		at:        {x: -434, y: 2260}
+		override:
+			name:    "Sprist"
+			sprite:  "loc/planets/blueyellow-marble"
+		earning:   1.0
+	*	base:      "can/carrier"
+		owner:     1
+		at:        {x: -1652, y: 3217}
+		target:    {initial: 6, lock: true}
+	*	base:      "can/carrier"
+		owner:     1
+		at:        {x: 2000, y: 2695}
+		flagship:  true
+		target:    {initial: 1}
+	*	base:      "can/fighter"
+		owner:     1
+		at:        {x: -1565, y: 2695}
+		target:    {initial: 16, lock: true}
+	*	base:      "can/fighter"
+		owner:     1
+		at:        {x: -782, y: 3565}
+		target:    {initial: 16, lock: true}
+	*	base:      "can/cruiser"
+		owner:     1
+		at:        {x: -1565, y: 869}
+		target:    {initial: 16, lock: true}
+	*	base:      "can/cruiser"
+		owner:     1
+		at:        {x: -2956, y: 1043}
+		target:    {initial: 16, lock: true}
+	*	base:      "can/cruiser"
+		owner:     1
+		at:        {x: -1565, y: -260}
+		target:    {initial: 16, lock: true}
+	*	base:      "can/cruiser"
+		owner:     1
+		at:        {x: -3043, y: -86}
+		target:    {initial: 16, lock: true}
+	*	base:      "can/cruiser"
+		owner:     1
+		at:        {x: -1913, y: 2086}
+		target:    {initial: 16, lock: true}
+conditions:
+	*	when:
+			type:    "destroyed"
+			op:      "eq"
+			object:  {initial: 6}
+			value:   true
+		subject:  {initial: 0}
+		action:
+			*	type:    "win"
+				player:  1
+				text:
+					>	Our carrier ISN 2020187 was destroyed in the battle.
+	*	when:
+			type:    "destroyed"
+			op:      "eq"
+			object:  {initial: 17}
+			value:   true
+		action:
+			*	type:    "win"
+				player:  0
+				next:    "ch11"
+				text:
+					>	You destoyed the Constant Voice of Zom, and the mastermind Som with it.
+briefings:
+	*	title:  "Sprist System"
+		content:
+			>	^Pcan/race^Our mission here is simple: destroy Mek Het, the Som of Tay
+			>	Ros. He is one of Cantharis's most influential advocates for expansion,
+			>	and one of their best military minds.
+	*	initial:  17
+		title:    "The Constant Voice of Doz"
+		content:
+			>	^Pcan/carrier^The Som is on the Carrier the Constant Voice of Zom.
+			>	Destroy this carrier and its escorts.
+	*	initial:  16
+		title:    "The Open Eye of Zom"
+		content:
+			>	^Pcan/carrier^The Open Eye of Zom is also in the Sprist system, and has
+			>	its own host of escorts.
+	*	initial:  6
+		title:    "ISN 2020187"
+		content:
+			>	^Pish/carrier^We've brought in a carrier of our own, the ISN 2020187. It
+			>	should be able to successfully engage the Constant Voice. However, if
+			>	2020187 is destroyed, the mission will be aborted. It has its own group
+			>	of escorts, including some Obish ships.
+starmap:  {left: 295, top: 180, right: 327, bottom: 204}
+par:
+	time:    "2m"
+	kills:   10
+	losses:  25
+no_ships:
+	>	You have lost all of your ships. The Som of Tay Don has escaped with his
+	>	life, and we have been humiliated.

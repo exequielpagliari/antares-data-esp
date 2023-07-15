@@ -1,0 +1,195 @@
+type:     "solo"
+chapter:  20
+title:
+	>	\i Chapter 17 
+	|	\i...And It Feels So Good
+players:
+	*	type:           "human"
+		race:           "ish"
+		name:           "The Human/Ishiman Cooperative"
+		earning_power:  1.0
+	*	type:           "cpu"
+		race:           "aud"
+		name:           "The Audemedon Axis"
+		earning_power:  1.0
+status:
+	*	text:       "Capture Lalande"
+	*	text:       "Beta"
+		underline:  true
+song:  "yesterday"
+initials:
+	*	base:  "ast/shoot/wide/up"
+		at:    {x: 0, y: 32767}
+	*	base:  "ast/shoot/wide/down"
+		at:    {x: 0, y: -32767}
+	*	base:  "loc/planet"
+		at:    {x: 28260, y: 27129}
+		override:
+			name:    "Lalande Alpha"
+			sprite:  "loc/planets/splatterpaint-pink"
+		earning:  1.0
+		build:
+			*	"cruiser"
+			*	"gunship"
+			*	"aslttran"
+			*	"carrier"
+			*	"hvd"
+			*	"transport"
+	*	base:  "loc/planet"
+		at:    {x: -28260, y: -27129}
+		override:
+			name:    "Lalande Beta"
+			sprite:  "loc/planets/marshmellow"
+		earning:  1.0
+		build:
+			*	"cruiser"
+			*	"gunship"
+			*	"aslttran"
+			*	"carrier"
+			*	"hvd"
+			*	"transport"
+	*	base:  "loc/bunker"
+		at:    {x: 0, y: 0}
+		override:
+			name:  "Bunker Station"
+		earning:   1.0
+	*	base:      "ish/hvd"
+		owner:     0
+		at:        {x: 28520, y: 28522}
+		hide:      true
+		flagship:  true
+	*	base:      "ele/cruiser"
+		owner:     0
+		at:        {x: 28957, y: 27652}
+		hide:      true
+	*	base:      "ele/cruiser"
+		owner:     0
+		at:        {x: 28167, y: 27126}
+		hide:      true
+	*	base:      "ele/cruiser"
+		owner:     0
+		at:        {x: 28866, y: 26603}
+		hide:      true
+	*	base:      "uns/cruiser"
+		owner:     0
+		at:        {x: 29474, y: 27559}
+		hide:      true
+		target:    {initial: 2}
+	*	base:      "uns/cruiser"
+		owner:     0
+		at:        {x: 29213, y: 26343}
+		hide:      true
+		target:    {initial: 2}
+	*	base:      "aud/carrier"
+		owner:     1
+		at:        {x: -29218, y: -25044}
+		hide:      true
+		flagship:  true
+	*	base:      "loc/outpost"
+		at:        {x: 9391, y: -9043}
+		override:
+			name:  "Outpost 1"
+		earning:  0.5
+	*	base:     "loc/outpost"
+		at:       {x: -8000, y: 9043}
+		override:
+			name:  "Outpost 2"
+		earning:  0.5
+conditions:
+	*	when:
+			type:      "time"
+			op:        "ge"
+			duration:  "-1s"
+		action:
+			*	type:       "reveal"
+				reflexive:  true
+				initial:    [5, 6, 7, 8, 9, 10, 11]
+			*	type:       "capture"
+				reflexive:  true
+				override:
+					subject:  {initial: 2}
+				player:  0
+			*	type:    "group"
+				override:
+					subject:  {initial: 3}
+				of:
+					*	type:       "capture"
+						reflexive:  true
+						player:     1
+					*	type:       "pay"
+						value:      50.0
+						player:     1
+	*	when:
+			type:    "owner"
+			op:      "eq"
+			object:  {initial: 2}
+			player:  1
+		subject:  {initial: 2}
+		action:
+			*	type:    "win"
+				player:  1
+				text:
+					>	Out base on Lelande Alpha was captured.
+	*	when:
+			type:    "owner"
+			op:      "eq"
+			object:  {initial: 3}
+			player:  0
+		subject:  {initial: 3}
+		action:
+			*	type:       "win"
+				reflexive:  true
+				player:     0
+				next:       "ch18"
+				text:
+					>	You captured the base on Lelande Beta, and it is again in human hands.
+briefings:
+	*	title:  "Lalande"
+		content:
+			>	The Lelande System was the human's latest and biggest colony. Hidden in
+			>	a widely dispersed asteroid field, the humans hoped to escape the
+			>	Cantharans' notice. Unfortunately, the colonists here have been
+			>	overwhelmed by Audemedons.
+	*	initial:  5
+		title:    "Heavy Destroyer"
+		content:
+			>	You will have the services of the base on Alpha, and you will be manning
+			>	this heavy destroyer.^Pish/hvd^
+			|	The base is capable of building even carriers.
+	*	initial:  6
+		title:    "Cruiser"
+		content:
+			>	^Pele/cruiser^The Elejeetians have graciously donated three more of
+			>	their cruisers to your cause. These cruisers are at your
+			>	disposal.^Puns/cruiser^The humans have, against our wishes, also
+			>	volunteered two cruisers. Unfortunately, these cruisers are woefully
+			>	underpowered and will be of little use to you.
+	*	initial:  4
+		title:    "Bunker Station"
+		content:
+			>	^Ploc/bunker^Although not necessary to complete the mission, the
+			>	stations in this system can generate resources for your ship building.
+			>	The bunker station in the center generates as many resources as a
+			>	planet.
+	*	initial:  12
+		title:    "Outpost 1"
+		content:
+			>	There are two outposts in the Lelande System. Each generates half as
+			>	many resources as a planet. An outpost is captured in the same manner as
+			>	a bunker station: at least five EVATs from an assault transport must
+			>	enter the station.^Ploc/outpost^
+	*	initial:  3
+		title:    "Lalande Beta"
+		content:
+			>	Your goal in this mission is to recapture the base on Lelande Beta. It
+			>	is occupied by Audemedon forces.^Paud/carrier^The Audemedon ships
+			>	greatly outmatch ours.
+			|	^Paud/cruiser^
+starmap:     {left: 140, top: 69, right: 172, bottom: 93}
+start_time:  "4m"
+par:
+	time:    "16m"
+	kills:   45
+	losses:  30
+no_ships:
+	>	All of your ships were destroyed.

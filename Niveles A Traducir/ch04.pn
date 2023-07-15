@@ -1,0 +1,265 @@
+type:     "solo"
+chapter:  7
+title:
+	>	\i Chapter 4 
+	|	\iShoplifter 1
+players:
+	*	type:           "human"
+		race:           "ish"
+		name:           "The Human/Ishiman Cooperative"
+		earning_power:  1.0
+	*	type:           "cpu"
+		race:           "gai"
+		name:           "The Gaitori Union"
+		earning_power:  1.5
+status:
+	*	text:       "Rescue 11"
+	*	text:       "Obiards"
+		underline:  true
+	*	prefix:     "In transport: "
+		counter:    {player: 0, which: 0}
+		suffix:     "/5"
+	*	prefix:     "Rescued: "
+		counter:    {player: 0, which: 1}
+		suffix:     "/11"
+song:  "eyes-of-fire"
+initials:
+	*	base:   "obi/etc/liner"
+		owner:  0
+		at:     {x: 0, y: 0}
+		override:
+			name:  "ISN 2020187"
+	*	base:    "obi/etc/transport/rescue"
+		owner:   0
+		at:      {x: 695, y: 956}
+		target:  {initial: 0}
+	*	base:    "gai/etc/lab/base"
+		owner:   1
+		at:      {x: -5130, y: -6086}
+		override:
+			name:  "Cell 1"
+		earning:  1.0
+	*	base:     "gai/etc/lab/base"
+		owner:    1
+		at:       {x: 4086, y: -7130}
+		override:
+			name:  "Cell 2"
+		earning:  1.0
+	*	base:     "gai/etc/lab/base"
+		owner:    1
+		at:       {x: -1042, y: -11652}
+		override:
+			name:  "Cell 3"
+		earning:   1.0
+	*	base:      "ish/hvc"
+		owner:     0
+		at:        {x: -608, y: 956}
+		flagship:  true
+		target:    {initial: 0}
+	*	base:      "obi/escort"
+		owner:     0
+		at:        {x: 260, y: 1826}
+		target:    {initial: 1, lock: true}
+	*	base:      "gai/etc/spawner/obj"
+		owner:     1
+		at:        {x: 520, y: -18956}
+	*	base:      "gai/cruiser"
+		owner:     1
+		at:        {x: -4175, y: -6610}
+		target:    {initial: 2, lock: true}
+	*	base:      "gai/cruiser"
+		owner:     1
+		at:        {x: 3129, y: -7566}
+		target:    {initial: 3, lock: true}
+	*	base:      "gai/cruiser"
+		owner:     1
+		at:        {x: 3998, y: -7566}
+		target:    {initial: 3, lock: true}
+	*	base:      "gai/cruiser"
+		owner:     1
+		at:        {x: -436, y: -10696}
+		target:    {initial: 4, lock: true}
+	*	base:      "gai/cruiser"
+		owner:     1
+		at:        {x: -262, y: -11653}
+		target:    {initial: 4, lock: true}
+	*	base:      "gai/gunship"
+		owner:     1
+		at:        {x: -697, y: -9653}
+		target:    {initial: 4, lock: true}
+	*	base:      "gai/cruiser"
+		owner:     1
+		at:        {x: -4175, y: -6610}
+		target:    {initial: 2, lock: true}
+	*	base:      "gai/fighter"
+		owner:     1
+		at:        {x: -3826, y: -7043}
+		target:    {initial: 2, lock: true}
+	*	base:      "gai/fighter"
+		owner:     1
+		at:        {x: 4347, y: -5652}
+		target:    {initial: 9, lock: true}
+conditions:
+	*	when:
+			type:     "score"
+			op:       "eq"
+			counter:  {player: 0, which: 0}
+			value:    5
+		action:
+			*	type:       "morph"
+				reflexive:  true
+				override:
+					subject:  {initial: 1}
+				base:       "obi/transport"
+				keep_ammo:  true
+	*	persistent:  true
+		when:
+			type:   "distance"
+			op:     "lt"
+			value:  223.608
+			from:   {initial: 1}
+			to:     {initial: 0}
+		subject:  {initial: 1}
+		direct:   {initial: 0}
+		action:
+			*	type:       "condition"
+				reflexive:  true
+				enable:     [2]
+	*	disabled:  true
+		when:
+			type:     "score"
+			op:       "ge"
+			counter:  {player: 0, which: 0}
+			value:    1
+		subject:  {initial: 1}
+		action:
+			*	type:                "create"
+				reflexive:           true
+				base:                "obi/etc/obiard/returning"
+				relative_velocity:   true
+				relative_direction:  true
+			*	type:                "score"
+				reflexive:           true
+				counter:             {player: 0, which: 0}
+				value:               -1
+			*	type:                "condition"
+				reflexive:           true
+				enable:              [0]
+			*	type:                "fire"
+				reflexive:           true
+				override:
+					subject:  {initial: 6}
+				which:      "special"
+			*	type:       "morph"
+				reflexive:  true
+				override:
+					subject:  {initial: 1}
+				base:       "obi/etc/transport/rescue"
+				keep_ammo:  true
+			*	type:       "check"
+	*	persistent:  true
+		when:
+			type:   "distance"
+			op:     "ge"
+			value:  223.608
+			from:   {initial: 1}
+			to:     {initial: 0}
+		subject:  {initial: 1}
+		direct:   {initial: 0}
+		action:
+			*	type:       "condition"
+				reflexive:  true
+				disable:    [2]
+	*	when:
+			type:     "score"
+			op:       "eq"
+			counter:  {player: 0, which: 1}
+			value:    11
+		action:
+			*	type:       "win"
+				reflexive:  true
+				player:     0
+				next:       "ch05"
+				text:
+					>	You rescued more than two thirds of the Obish hostages. Ambassador
+					>	Thrntz extends his gratitude.
+	*	when:
+			type:     "score"
+			op:       "eq"
+			counter:  {player: 0, which: 2}
+			value:    5
+		action:
+			*	type:       "win"
+				reflexive:  true
+				player:     1
+				text:
+					>	Too many of the Obiards were killed in your rescue attempt for this
+					>	mission to be considered successful.
+briefings:
+	*	title:  "Elysium System"
+		content:
+			>	A civilian Obish vessel was seized by a rogue band of Gaitori
+			>	mercenaries, loyalists to the Order. The mercenaries are holding the
+			>	surviving Obiards captive in a group of deep space cells. Your mission
+			>	in the Elysium System is to help the Obish rescue the hostages.
+	*	title:  "Elysium System"
+		content:
+			>	^Pbrf/thrntz^This mission has special significance. We have confirmed
+			>	that one of the Obiards being held is Ambassador Thrntz, a key
+			>	negotiator in the Obain/Gaitor Nonaggression Pact. His safe return would
+			>	win you considerable favor with the Obiards.
+	*	initial:  5
+		title:    "Heavy Cruiser"
+		content:
+			>	You will be conducting this mission from a heavy cruiser. There is
+			>	little margin for error in this enterprise; conservation of your heavy
+			>	cruiser’s resources will be vital for success.
+	*	initial:  1
+		title:    "Transport"
+		content:
+			>	To pick up the prisoners, you'll be escorting this sublight Obish
+			>	transport. It is armed with minimal defensive lasers capable of breaking
+			>	the deep space cells open. Once a cell is breached, the prisoners will
+			>	escape and attempt to enter the transport.
+			>
+			>	The Obish prisoners will be vulnerable to your weapons fire, since your
+			>	targeting systems will not be keyed to their suits. Be careful not to
+			>	catch them in crossfire. They will also be disoriented, so give them
+			>	plenty of time to enter the transport.
+	*	initial:  3
+		title:    "Cell 1"
+		content:
+			>	There are three deep space cells, each holding five Obiards. Command the
+			>	transport to each cell in turn, then allow it to break open the cell and
+			>	pick up the prisoners. The cells will be guarded, and your transport
+			>	will need protection.
+	*	initial:  0
+		title:    "Passenger Liner"
+		content:
+			>	The transport can carry all five Obiards contained in a deep space cell.
+			>	When the transport has picked up the prisoners at a cell, command it to
+			>	return to this waiting Obish passenger liner. The Obiards will exit the
+			>	transport and enter the liner.
+	*	title:  "Elysium System"
+		content:
+			>	In addition to the ships guarding the cells, there are several squadrons
+			>	of Gaitori fighters and cruisers on maneuvers in the vicinity. You
+			>	should monitor the transport's position closely, as enemy cruisers could
+			>	appear and quickly overtake the transport at any time. Don’t stray too
+			>	far from the transport’s side.
+	*	initial:  6
+		title:    "Escort"
+		content:
+			>	An Obish cruiser will escort the transport. It is under the command of
+			>	the Obiards, so it will not be available for you to control.
+	*	title:  "Elysium System"
+		content:
+			>	For the mission to be considered successful, you must rescue at least
+			>	eleven of the fifteen total hostages. Good luck.
+starmap:  {left: 444, top: 247, right: 476, bottom: 271}
+par:
+	time:    "12m"
+	kills:   25
+	losses:  0
+no_ships:
+	>	You lost your ships without rescuing enough Obiards.

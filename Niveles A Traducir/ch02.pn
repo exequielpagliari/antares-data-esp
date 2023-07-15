@@ -1,0 +1,118 @@
+type:     "solo"
+chapter:  4
+title:
+	>	\i Chapter 2 
+	|	\iThe Stars Have Ears
+players:
+	*	type:           "human"
+		race:           "ish"
+		name:           "The Human/Ishiman Cooperative"
+		earning_power:  0.004
+	*	type:           "cpu"
+		race:           "gai"
+		name:           "The Gaitori Union"
+status:
+	*	text:       "Destroy all 4"
+	*	text:       "relay dishes."
+
+	*	prefix:     "Remaining: "
+
+		override:
+			name:    "Myrmidon Station"
+			sprite:  "loc/habitat"
+		
+conditions:
+
+		action:
+			*	type:    "win"
+				player:  0
+				next:    "tut3"
+				text:
+					>	Mission completed. You destroyed all four of the sensor relay dishes.
+	*	when:
+			type:    "destroyed"
+			op:      "eq"
+			object:  {initial: 1}
+			value:   true
+		action:
+			*	type:    "win"
+				player:  1
+				text:
+					>	You lost your heavy cruiser, failing to destroy all four relay dishes.
+	*	when:
+			type:    "destroyed"
+			
+		action:
+			
+			*	type:       "message"
+				reflexive:  true
+				pages:
+					*	>	\i INCOMING TRANSMISSION \i SECURE KEY OK - NW3 TIGHT BEAM
+						|	SOURCE: OMV Treejumper, Escort 3856
+						|	Humans: your bravery has impressed us. We are honored to offer our
+						>	assistance in the destruction of the relay dishes. Stand by. \i<EOT>\i 
+briefings:
+	*	initial:  15
+		title:    "Myrmidon"
+		content:
+			>	The Gaitori in this system have deployed a series of long-range scanner
+			>	relay dishes, designed to gather information on our ship movements.
+			>
+			>	You are to put an end to this intrusion by destroying all four relay
+			>	stations.
+	*	initial:  1
+		title:    "Cruiser"
+		content:
+			>	^Pish/hvc^You'll be dropped in here. Your only ship for this mission is
+			>	this heavy cruiser. It's speedier than the standard cruiser, and has an
+			>	improved rapid-fire fusion pulse gun. Save your guided missiles for
+			>	difficult targets. If you lose the cruiser, the mission will be aborted.
+	*	initial:  0
+		title:    "Relay Dish 1"
+		content:
+			>	^Pbrf/relay^This the the first of the four Relay Stations you should
+			>	destroy. The stations are unarmed, and are only protected by deflector
+			>	shields.
+	*	initial:  2
+		title:    "Cruiser"
+		content:
+			>	^Pgai/cruiser^There are Gaitori cruisers stationed at each dish. Their
+			>	cruisers are slow, but are armed with rapid-fire concussive pellet
+			>	guns. 
+	*	initial:  16
+		title:    "Relay Dish 2"
+		content:
+			>	This is dish is your second target.
+	*	initial:  17
+		title:    "Relay Dish 3"
+		content:
+			>	The third dish is your next target.
+			|	^Pgai/gunship^This dish is being guarded by a gunship. Gaitori gunships
+			>	are not heavily armored, but they have converted atomic pulse mining
+			>	guns, which fire powerful long-range homing pulses.
+	*	initial:  18
+		title:    "Relay Dish 4"
+		content:
+			>	This is the last Relay Station you should destroy. With a gunship and
+			>	two cruisers nearby, it's the most heavily guarded.
+	*	initial:  14
+		title:    "Myrmidon Station"
+		content:
+			>	^Pbrf/habitat^The Gaitori habitat station in the Myrmidon System is
+			>	heavily armed. We recommend that you keep a safe distance from this
+			>	station.
+	*	title:  "Obish Escorts"
+		content:
+			>	^Pobi/escort^A pair of Obish escorts is in the region. They've expressed
+			>	an interest in aiding us in destroying the Relay Stations, but have
+			>	indicated that they would like to observe your progress first. They may
+			>	choose to join you during the mission. The Obish Escorts have Salrilian
+			>	stealth fields and Ishiman core pulse guns.
+starmap:  {left: 377, top: 270, right: 409, bottom: 294}
+par:
+	time:    "2m"
+	kills:   10
+	losses:  0
+no_ships:
+	>	Your ship was destroyed. We cannot supply you with vessels if you are
+	>	this poor a pilot.

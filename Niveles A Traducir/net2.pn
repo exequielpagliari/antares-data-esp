@@ -1,0 +1,135 @@
+type:  "net"
+title:
+	>	\i Scratching Post 
+	|	\i 
+players:
+	*	type:  "human"
+		races:
+			*	"ish"
+			*	"uns"
+			*	"can"
+			*	"gai"
+			*	"sal"
+			*	"aud"
+		earning_power:  1.0
+	*	type:           "human"
+		races:
+			*	"ish"
+			*	"uns"
+			*	"can"
+			*	"gai"
+			*	"sal"
+			*	"aud"
+		earning_power:  1.0
+song:  "getalong"
+initials:
+	*	base:   "ast/shoot/wide/up"
+		at:     {x: 0, y: 32767}
+	*	base:   "ast/shoot/wide/down"
+		at:     {x: 0, y: -32767}
+	*	base:   "loc/planet"
+		owner:  0
+		at:     {x: 0, y: 16384}
+		override:
+			name:    "Lalande Alpha"
+			sprite:  "loc/planets/clay"
+		earning:  1.0
+		build:
+			*	"cruiser"
+			*	"gunship"
+			*	"aslttran"
+			*	"carrier"
+			*	"hvd"
+			*	"transport"
+	*	base:   "loc/planet"
+		owner:  1
+		at:     {x: 0, y: -16384}
+		override:
+			name:    "Lalande Beta"
+			sprite:  "loc/planets/sta-puft"
+		earning:  1.0
+		build:
+			*	"cruiser"
+			*	"gunship"
+			*	"aslttran"
+			*	"carrier"
+			*	"hvd"
+			*	"transport"
+	*	base:  "loc/outpost"
+		at:    {x: 0, y: 9000}
+		override:
+			name:  "Outpost 1"
+		earning:  0.25
+	*	base:     "loc/outpost"
+		at:       {x: 0, y: -9000}
+		override:
+			name:  "Outpost 2"
+		earning:  0.25
+	*	base:     "loc/outpost"
+		at:       {x: 9000, y: 0}
+		override:
+			name:  "Outpost 3"
+		earning:  0.25
+	*	base:     "loc/outpost"
+		at:       {x: -9000, y: 0}
+		override:
+			name:  "Outpost 4"
+		earning:  0.25
+	*	base:     "loc/bunker"
+		at:       {x: 0, y: 0}
+		override:
+			name:  "Bunker Station"
+		earning:   1.0
+	*	base:      "hvd"
+		owner:     0
+		at:        {x: 0, y: 16380}
+		hide:      true
+		flagship:  true
+	*	base:      "hvd"
+		owner:     1
+		at:        {x: 0, y: -16380}
+		hide:      true
+		flagship:  true
+conditions:
+	*	when:
+			type:      "time"
+			op:        "ge"
+			duration:  "-1s"
+		action:
+			*	type:       "reveal"
+				reflexive:  true
+				initial:    [9, 10]
+	*	when:
+			type:    "owner"
+			op:      "eq"
+			object:  {initial: 2}
+			player:  1
+		subject:  {initial: 2}
+		action:
+			*	type:       "win"
+				reflexive:  true
+				player:     1
+				text:
+					>	Player 2 captured Lelande Beta.
+	*	when:
+			type:    "owner"
+			op:      "eq"
+			object:  {initial: 3}
+			player:  0
+		subject:  {initial: 3}
+		action:
+			*	type:       "win"
+				reflexive:  true
+				player:     0
+				text:
+					>	Player 1 Captured Lelande Alpha
+starmap:     {left: 84, top: 88, right: 116, bottom: 112}
+start_time:  "4m"
+description:
+	>	Dispersed asteroid field, two planets, one bunker station, four
+	>	outposts. Outposts earn 1/2 as much as planets & stations. (PPC
+	>	recommended)
+own_no_ships:
+	>	All of your ships have been destroyed.
+foe_no_ships:
+	>	All of your opponent's ships have been destroyed.

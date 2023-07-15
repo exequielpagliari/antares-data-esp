@@ -1,0 +1,121 @@
+type:  "net"
+title:
+	>	\i Between a Rock and a Rock 
+	|	\i 
+players:
+	*	type:  "human"
+		races:
+			*	"ish"
+			*	"uns"
+			*	"can"
+			*	"gai"
+			*	"sal"
+			*	"aud"
+		earning_power:  1.0
+	*	type:           "human"
+		races:
+			*	"ish"
+			*	"uns"
+			*	"can"
+			*	"gai"
+			*	"sal"
+			*	"aud"
+		earning_power:  1.0
+song:  "targetron"
+initials:
+	*	base:   "ast/shoot/lite/up"
+		at:     {x: 0, y: 32767}
+	*	base:   "ast/shoot/lite/down"
+		at:     {x: 0, y: -32767}
+	*	base:   "loc/planet"
+		owner:  0
+		at:     {x: 28260, y: 27129}
+		override:
+			name:    "Proteus Alpha"
+			sprite:  "loc/planets/nastyswirl"
+		earning:  1.0
+		build:
+			*	"cruiser"
+			*	"gunship"
+			*	"aslttran"
+			*	"carrier"
+			*	"hvd"
+			*	"transport"
+	*	base:   "loc/planet"
+		owner:  1
+		at:     {x: -28260, y: -27129}
+		override:
+			name:    "Proteus Beta"
+			sprite:  "loc/planets/moldymud"
+		earning:  1.0
+		build:
+			*	"cruiser"
+			*	"gunship"
+			*	"aslttran"
+			*	"carrier"
+			*	"hvd"
+			*	"transport"
+	*	base:  "loc/bunker"
+		at:    {x: -6261, y: 22261}
+		override:
+			name:  "Bunker Station 1"
+		earning:  1.0
+	*	base:     "loc/bunker"
+		at:       {x: 6621, y: -22621}
+		override:
+			name:  "Bunker Station 2"
+		earning:   1.0
+	*	base:      "hvd"
+		owner:     0
+		at:        {x: 28520, y: 27129}
+		hide:      true
+		flagship:  true
+		target:    {initial: 2}
+	*	base:      "hvd"
+		owner:     1
+		at:        {x: -21131, y: -18608}
+		hide:      true
+		flagship:  true
+		target:    {initial: 3}
+conditions:
+	*	when:
+			type:      "time"
+			op:        "ge"
+			duration:  "-1s"
+		action:
+			*	type:       "reveal"
+				reflexive:  true
+				initial:    [6, 7]
+	*	when:
+			type:    "owner"
+			op:      "eq"
+			object:  {initial: 2}
+			player:  1
+		subject:  {initial: 2}
+		action:
+			*	type:       "win"
+				reflexive:  true
+				player:     1
+				text:
+					>	Player 2 captured Palyos Alpha.
+	*	when:
+			type:    "owner"
+			op:      "eq"
+			object:  {initial: 3}
+			player:  0
+		subject:  {initial: 3}
+		action:
+			*	type:       "win"
+				reflexive:  true
+				player:     0
+				text:
+					>	Player 1 captured Palyos Beta.
+starmap:     {left: 184, top: 188, right: 216, bottom: 212}
+start_time:  "4m"
+description:
+	>	Basic head to head: capture the enemy planet. An asteroid belt, two
+	>	planets, and two bunker stations. Asteroids mask ships at long range.
+own_no_ships:
+	>	All of your ships have been destroyed.
+foe_no_ships:
+	>	All of your opponent's ships have been destroyed.

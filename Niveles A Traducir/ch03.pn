@@ -1,0 +1,170 @@
+type:     "solo"
+chapter:  6
+title:
+	>	\i Chapter 3 
+	|	\iWhile The Iron Is Hot
+players:
+	*	type:           "human"
+		race:           "ish"
+		name:           "The Human/Ishiman Cooperative"
+		earning_power:  1.0
+	*	type:           "cpu"
+		race:           "gai"
+		name:           "The Gaitori Union"
+		earning_power:  0.848
+status:
+	*	text:       "Capture Demeter"
+	*	text:       "Beta"
+		underline:  true
+song:  "targetron"
+initials:
+	*	base:   "loc/planet"
+		owner:  0
+		at:     {x: 260, y: 4695}
+		override:
+			name:    "Demeter Alpha"
+			sprite:  "loc/planets/saturny"
+		earning:  1.0
+		build:
+			*	"fighter"
+			*	"cruiser"
+			*	"transport"
+	*	base:      "ish/cruiser"
+		owner:     0
+		at:        {x: 782, y: 4782}
+		flagship:  true
+	*	base:      "loc/sun"
+		at:        {x: -3478, y: 86}
+		override:
+			name:  "Demeter"
+	*	base:      "gai/cruiser"
+		owner:     1
+		at:        {x: -1251, y: -8336}
+		flagship:  true
+	*	base:      "gai/carrier"
+		owner:     1
+		at:        {x: 260, y: -8695}
+		hide:      true
+	*	base:      "loc/planet"
+		owner:     1
+		at:        {x: -347, y: -7477}
+		override:
+			name:    "Demeter Beta"
+			sprite:  "loc/planets/yellow-cookie"
+		earning:  1.0
+		build:
+			*	"fighter"
+			*	"cruiser"
+			*	"gunship"
+			*	"transport"
+conditions:
+	*	when:
+			type:    "owner"
+			op:      "eq"
+			object:  {initial: 0}
+			player:  1
+		subject:  {initial: 0}
+		action:
+			*	type:    "win"
+				player:  1
+				text:
+					>	The Gaitori have taken our base on Demeter Alpha. The system is now
+					>	controlled by them.
+	*	when:
+			type:    "owner"
+			op:      "eq"
+			object:  {initial: 5}
+			player:  0
+		subject:  {initial: 5}
+		action:
+			*	type:    "win"
+				player:  0
+				next:    "ch04"
+				text:
+					>	You took the Gaitori base on Demeter Beta. The mission was a success.
+	*	when:
+			type:      "time"
+			op:        "ge"
+			duration:  "1m"
+		action:
+			*	type:       "message"
+				reflexive:  true
+				pages:
+					*	>	\i INCOMING TRANSMISSION \i SECURE KEY OK - NW3 TIGHT BEAM
+						|	SOURCE: Human/Ishiman Coord. Control
+						|	\iWARNING. WARNING.\i We were apparently mislead regarding the Gaitori's
+						>	readiness for our offensive. A Gaitori carrier has just been detected in
+						>	the Elysium/Demeter jumpstream. We believe it's the GCS Caretaker.
+						>	Destroy the carrier if possible.\i<EOT>\i 
+			*	type:       "delay"
+				duration:   "6s40t"
+			*	type:       "reveal"
+				reflexive:  true
+				initial:    [4]
+briefings:
+	*	title:  "Demeter"
+		content:
+			>	Our success in the Myrmidon System has caught the Gaitori by surprise.
+			>	The last thing they expected was an offensive initiated by the Ishiman
+			>	Stellar Navy. Your instinctual aggressiveness served you well.
+			>
+			>	Your goal in the Demeter System is to capitalize on the Gaitori's
+			>	disarray by seizing one of their planet-based outposts threatening our
+			>	space. This is an opportunity for you to demonstrate the ability to
+			>	coordinate a space-to-surface assault.
+	*	initial:  1
+		title:    "Cruiser"
+		content:
+			>	^Pish/cruiser^You'll initially be using this standard cruiser. By
+			>	utilizing our base on Alpha, you'll be able to manufacture as many of
+			>	these cruisers as you can afford.
+	*	initial:  0
+		title:    "Demeter Alpha"
+		content:
+			>	You must protect our base on Demeter Alpha from enemy transports. If a
+			>	Gaitori transport lands on Alpha, the mission will be aborted.
+			>
+			>	The base on Alpha can produce two types of ships in addition to
+			>	cruisers. 
+			|	^Pish/fighter^Fighters are fast, but can only travel at sublight speeds.
+			>	Their only weapons are photokinetic beam cannons.
+	*	initial:  0
+		title:    "Demeter Alpha"
+		content:
+			>	^Pish/transport^The transport is the only ship capable of
+			>	space-to-surface assault. They are limited to sublight travel and are
+			>	unarmed.
+			>
+			>	For this mission you'll need to give a transport orders to go to Demeter
+			>	Beta. It will attempt to land once it arrives.
+	*	initial:  5
+		title:    "Demeter Beta"
+		content:
+			>	This planet is your objective. Land a transport here to complete the
+			>	mission.
+			>
+			>	The base here can produce four types of ships.
+	*	initial:  5
+		title:    "Demeter Beta"
+		content:
+			>	^Pgai/fighter^Gaitori fighters are slow, and poorly armored.
+			|	^Pgai/cruiser^You've already encountered several of their cruisers.
+	*	initial:  5
+		title:    "Demeter Beta"
+		content:
+			>	^Pgai/transport^Destroy any of their transports you find making its way
+			>	towards our base on Alpha. If our base is lost, the mission will be
+			>	aborted.
+			>
+			>	The Gaitori base can also construct gunships.
+			|	^Pgai/gunship^
+			|	Good luck.
+starmap:  {left: 338, top: 259, right: 370, bottom: 283}
+par:
+	time:    "3m"
+	kills:   16
+	losses:  4
+no_ships:
+	>	All of your ships have been destroyed, and the Gaitori control the
+	>	system. Although we’ve supplied you with superior fire-power, you’ve
+	>	proven that you’re incapable of managing it.

@@ -1,0 +1,193 @@
+type:     "solo"
+chapter:  18
+title:
+	>	\i Chapter 15 
+	|	\iThe Left Hand
+players:
+	*	type:           "human"
+		race:           "ish"
+		name:           "The Human/Ishiman Cooperative"
+		earning_power:  1.0
+	*	type:           "cpu"
+		race:           "sal"
+		name:           "The Prophets of Salril"
+		earning_power:  2.0
+status:
+	*	text:       "Capture Thasero"
+	*	text:       "Beta"
+		underline:  true
+song:  "technobee"
+initials:
+	*	base:   "loc/planet"
+		owner:  0
+		at:     {x: 0, y: 6000}
+		override:
+			name:    "Thasero Alpha"
+			sprite:  "loc/planets/moldymud"
+		earning:  1.0
+		build:
+			*	"fighter"
+			*	"cruiser"
+			*	"gunship"
+			*	"transport"
+			*	"aslttran"
+	*	base:   "loc/planet"
+		owner:  1
+		at:     {x: 0, y: -7478}
+		override:
+			name:    "Thasero Beta"
+			sprite:  "loc/planets/calmpurple"
+		earning:  1.0
+		build:
+			*	"fighter"
+			*	"cruiser"
+			*	"gunship"
+			*	"transport"
+			*	"aslttran"
+	*	base:   "loc/bunker"
+		owner:  1
+		at:     {x: 0, y: 0}
+		override:
+			name:    "Thasero Station"
+			sprite:  "sal/etc/battlestation"
+		earning:   1.0
+	*	base:      "ish/hvd"
+		owner:     0
+		at:        {x: 869, y: 6521}
+		flagship:  true
+	*	base:      "sal/gunship"
+		owner:     1
+		at:        {x: 956, y: -7130}
+	*	base:      "ish/carrier"
+		owner:     0
+		at:        {x: -782, y: 6521}
+		target:    {initial: 0}
+	*	base:      "baz/bttlship"
+		owner:     0
+		at:        {x: 86, y: 7478}
+		target:    {initial: 0}
+	*	base:      "sal/carrier"
+		owner:     1
+		at:        {x: -9565, y: -9565}
+		hide:      true
+	*	base:      "sal/carrier"
+		owner:     1
+		at:        {x: -8695, y: -9130}
+		hide:      true
+	*	base:      "aud/carrier"
+		owner:     1
+		at:        {x: -9565, y: -8000}
+		hide:      true
+conditions:
+	*	when:
+			type:   "distance"
+			op:     "lt"
+			value:  223.608
+			from:   {initial: 2}
+			to:     {initial: 3}
+		subject:  {initial: 2}
+		direct:   {initial: 3}
+		action:
+			*	type:       "delay"
+				duration:   "2s"
+			*	type:       "message"
+				reflexive:  true
+				pages:
+					*	>	\i INCOMING TRANSMISSION \i SECURE KEY OK - NW3 TIGHT BEAM
+						|	SOURCE: Human/Ishiman Coord. Control
+						|	\i WARNING \i Three large signals have been detected in the Thasero/Ser
+						>	jumpstream. One of the objects appears to be the Salrilian carrier
+						>	Horrible Flies. The other objects are unidentified. \i<EOT>\i 
+			*	type:       "delay"
+				duration:   "3s"
+			*	type:       "reveal"
+				reflexive:  true
+				initial:    [7, 8, 9]
+	*	when:
+			type:    "owner"
+			op:      "eq"
+			object:  {initial: 0}
+			player:  1
+		subject:  {initial: 0}
+		action:
+			*	type:    "win"
+				player:  1
+				text:
+					>	The Salrilians captured our base on Alpha.
+	*	when:
+			type:    "owner"
+			op:      "eq"
+			object:  {initial: 1}
+			player:  0
+		subject:  {initial: 1}
+		action:
+			*	type:    "win"
+				player:  0
+				next:    "ch16"
+				text:
+					>	You captured the Salrilian base on Beta.
+briefings:
+	*	title:  "Thasero Station"
+		content:
+			>	The Salrilians, the so-called Prophets, appear to have invested
+			>	considerably in the Cantharan Order's success. While their motives
+			>	remain obscure, their willingness to fight has become clear.
+			>
+			>	The Salrilians orchestrated the attack on the Elejeetian liner Banadee
+			>	from here, the Thasero System--and it is here that you will make your
+			>	willingness to fight clear to the Salrilians.
+	*	initial:  0
+		title:    "Thasero Alpha"
+		content:
+			>	^Pish/aslttran^From our base on Thasero Alpha you can make all the ships
+			>	you'll require for this mission: fighters, cruisers, gunships,
+			>	transports, and assault transports.
+	*	initial:  3
+		title:    "Heavy Destroyer"
+		content:
+			>	^Pish/hvd^You'll start in this destroyer. It's the only one we'll be
+			>	able to commit to this mission.
+	*	initial:  5
+		title:    "Carrier"
+		content:
+			>	^Pish/carrier^We expect stiff resistance, so we've brought the carrier
+			>	ISN 0910969 in system. 
+	*	initial:  6
+		title:    "Battleship"
+		content:
+			>	^Pbaz/bttlship^Thanks to your efforts in the Bokleo system, the
+			>	Bazidanese have loaned us a battleship, the First Life. Its homing
+			>	pulses are fairly powerful.
+	*	initial:  2
+		title:    "Thasero Station"
+		content:
+			>	^Pbrf/thasero^Thasero Station is your first objective. The sooner you
+			>	knock out its shielding, the fewer resources the Salrilians will have to
+			>	spend on ship building. Use an assault transport to gain control of the
+			>	station--you'll be able to build more ships.
+	*	initial:  1
+		title:    "Thasero Beta"
+		content:
+			>	The base on Thasero Beta is your final goal. Land a transport here to
+			>	complete the mission.
+			|	^Psal/fighter^The Salrilian fighters are difficult to see by design.
+			|	^Psal/cruiser^Their cruisers have stealth fields.
+	*	initial:  1
+		title:    "Thasero Beta"
+		content:
+			>	^Psal/gunship^Salrilian gunships also have stealth fields. They are fast
+			>	and well armed.
+			|	^Psal/transport^The Prophet's transports almost always operate with
+			>	active stealth fields. Often the only way to prevent one them from
+			>	sneaking onto a planet is by firing blindly.
+	*	title:  "The Actualizer"
+		content:
+			>	^Psal/carrier^A Salrilian carrier, which we believe to be the
+			>	Actualizer, is en route to the Thasero System. Dispatch it quickly.
+starmap:  {left: 134, top: 108, right: 166, bottom: 132}
+par:
+	time:    "7m15s"
+	kills:   56
+	losses:  17
+no_ships:
+	>	The Prophets of Salril have delivered total defeat.

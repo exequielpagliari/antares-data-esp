@@ -1,0 +1,298 @@
+type:     "solo"
+chapter:  23
+title:
+	>	\i Chapter 20 
+	|	\iThe Mothership Connection
+players:
+	*	type:           "human"
+		race:           "ish"
+		name:           "The Human/Ishiman Cooperative"
+		earning_power:  1.0
+	*	type:           "cpu"
+		race:           "can"
+		name:           "The Cantharan Order"
+		earning_power:  1.0
+status:
+	*	text:       "Destroy hostile"
+	*	text:       "gateship"
+		underline:  true
+song:  "technobee"
+initials:
+	*	base:      "ish/etc/hvc/mod"
+		owner:     0
+		at:        {x: -87, y: 2520}
+		flagship:  true
+	*	base:      "loc/planet"
+		owner:     1
+		at:        {x: 9739, y: -3043}
+		override:
+			name:    "Earth"
+			sprite:  "loc/planets/earth"
+		earning:   1.0
+	*	base:      "can/gateship/damaged"
+		owner:     1
+		at:        {x: 8347, y: -1304}
+		flagship:  true
+		target:    {initial: 1, lock: true}
+	*	base:      "ast/shoot/nasty"
+		at:        {x: -3042, y: 6086}
+	*	base:      "can/carrier"
+		owner:     1
+		at:        {x: 10523, y: -10522}
+		hide:      true
+	*	base:      "can/carrier"
+		owner:     1
+		at:        {x: 9739, y: -11478}
+		hide:      true
+	*	base:      "can/carrier"
+		owner:     1
+		at:        {x: 10695, y: -11651}
+		hide:      true
+	*	base:      "can/carrier"
+		owner:     1
+		at:        {x: 10000, y: -10609}
+		hide:      true
+	*	base:      "can/carrier"
+		owner:     1
+		at:        {x: 11391, y: -10348}
+		hide:      true
+	*	base:      "can/carrier"
+		owner:     1
+		at:        {x: 11305, y: -11477}
+		hide:      true
+	*	base:      "can/hvc"
+		owner:     1
+		at:        {x: 11304, y: -10956}
+		hide:      true
+	*	base:      "can/hvc"
+		owner:     1
+		at:        {x: 10174, y: -11304}
+		hide:      true
+	*	base:      "uns/transport"
+		owner:     0
+		at:        {x: 8088, y: 6609}
+		hide:      true
+		target:    {initial: 1, lock: true}
+	*	base:      "uns/transport"
+		owner:     0
+		at:        {x: 8218, y: 6577}
+		hide:      true
+		target:    {initial: 1, lock: true}
+	*	base:      "uns/transport"
+		owner:     0
+		at:        {x: 7980, y: 6619}
+		hide:      true
+		target:    {initial: 1, lock: true}
+	*	base:      "uns/transport"
+		owner:     0
+		at:        {x: 8034, y: 6739}
+		hide:      true
+		target:    {initial: 1, lock: true}
+	*	base:      "uns/transport"
+		owner:     0
+		at:        {x: 8164, y: 6685}
+		hide:      true
+		target:    {initial: 1, lock: true}
+	*	base:      "uns/transport"
+		owner:     0
+		at:        {x: 8023, y: 6539}
+		hide:      true
+		target:    {initial: 1, lock: true}
+	*	base:      "uns/transport"
+		owner:     0
+		at:        {x: 8147, y: 6533}
+		hide:      true
+		target:    {initial: 1, lock: true}
+	*	base:      "uns/transport"
+		owner:     0
+		at:        {x: 8299, y: 6734}
+		hide:      true
+		target:    {initial: 1, lock: true}
+	*	base:      "uns/transport"
+		owner:     0
+		at:        {x: 7882, y: 6550}
+		hide:      true
+		target:    {initial: 1, lock: true}
+	*	base:      "uns/transport"
+		owner:     0
+		at:        {x: 8251, y: 6484}
+		hide:      true
+		target:    {initial: 1, lock: true}
+	*	base:      "uns/carrier"
+		owner:     0
+		at:        {x: 8056, y: 6484}
+		hide:      true
+		target:    {initial: 16, lock: true}
+	*	base:      "uns/carrier"
+		owner:     0
+		at:        {x: 8348, y: 6647}
+		hide:      true
+		target:    {initial: 17, lock: true}
+	*	base:      "uns/carrier"
+		owner:     0
+		at:        {x: 7925, y: 6717}
+		hide:      true
+		target:    {initial: 18, lock: true}
+	*	base:      "uns/carrier"
+		owner:     0
+		at:        {x: 8196, y: 6788}
+		hide:      true
+		target:    {initial: 19, lock: true}
+	*	base:      "uns/cruiser"
+		owner:     0
+		at:        {x: 8018, y: 6897}
+		hide:      true
+		target:    {initial: 0, lock: true}
+	*	base:      "uns/gunship"
+		owner:     0
+		at:        {x: 8267, y: 6875}
+		hide:      true
+		target:    {initial: 0, lock: true}
+	*	base:      "uns/gunship"
+		owner:     0
+		at:        {x: 7925, y: 6837}
+		hide:      true
+		target:    {initial: 23, lock: true}
+	*	base:      "uns/gunship"
+		owner:     0
+		at:        {x: 8120, y: 6782}
+		hide:      true
+		target:    {initial: 25, lock: true}
+	*	base:      "uns/fighter"
+		owner:     0
+		at:        {x: 8142, y: 6886}
+		hide:      true
+		target:    {initial: 13, lock: true}
+	*	base:      "uns/cruiser"
+		owner:     0
+		at:        {x: 8045, y: 6853}
+		hide:      true
+		target:    {initial: 28, lock: true}
+	*	base:      "uns/gunship"
+		owner:     0
+		at:        {x: 8403, y: 6864}
+		hide:      true
+		target:    {initial: 14, lock: true}
+conditions:
+	*	when:
+			type:    "health"
+			op:      "le"
+			value:   0.5
+			object:  {initial: 2}
+		subject:  {initial: 2}
+		action:
+			*	type:       "message"
+				reflexive:  true
+				pages:
+					*	>	\i INCOMING TRANSMISSION \i SECURE KEY OK - NW3 TIGHT BEAM
+						|	SOURCE: UNS Musgrave
+						|	We regret to inform you that the Cantharan carriers we were engaging at
+						>	Upsilon Andromeda have withdrawn. About four escaped through a
+						>	Cantharan-constructed jumpgate, and we were unable to pursue. Looks like
+						>	they’re headed your way. \i<EOT>\i 
+	*	disabled:  true
+		when:
+			type:    "ships"
+			op:      "eq"
+			player:  1
+			value:   0
+		action:
+			*	type:       "delay"
+				duration:   "6s"
+			*	type:       "message"
+				reflexive:  true
+				pages:
+					*	>	\i INCOMING TRANSMISSION \i NO KEY - NW2 BROAD BEAM
+						|	SOURCE: UNS Musgrave
+						|	Unbelievable. We’re about to come into Sol through thanks to the Ishiman
+						>	gateship, and I can’t believe our sensors! We’re not picking up any
+						>	hostile ships. You did it! \i<EOT>\i 
+			*	type:       "delay"
+				duration:   "6s"
+			*	type:       "reveal"
+				reflexive:  true
+				initial:    [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]
+	*	when:
+			type:    "owner"
+			op:      "eq"
+			object:  {initial: 1}
+			player:  0
+		subject:  {initial: 1}
+		action:
+			*	type:       "win"
+				reflexive:  true
+				player:     0
+				text:
+					>	Earth is free! The Cantharans have been defeated!
+briefings:
+	*	title:  "Sol"
+		content:
+			>	The Cantharan gateship has withdrawn to Earth. It has activated a
+			>	jumpgate disruption device, apparently a derivative of the Audemedon
+			>	device you destroyed in the Ser system. Still, we believe we can get a
+			>	single ship through a small jumpstream to intercept the gateship. This
+			>	will be your last chance to destroy the gateship and to bring freedom to
+			>	your home world.
+	*	title:  "Sol"
+		content:
+			>	^Pish/hvc^We have two surprises for the Cantharan gateship. One is this
+			>	enhanced heavy cruiser, the ship you’ll be using to engage the gateship.
+			>	The Elejeetian Minister of Technology was most grateful for your
+			>	services, and supplied us with some modifications to our standard heavy
+			>	cruiser.
+	*	initial:  0
+		title:    "Modified Cruiser"
+		content:
+			>	The heavy cruiser is now armed with an Onas pulse gun, an energy weapon
+			>	with very little drain. The cruiser has also been made faster and more
+			>	nimble. Even so, it is by itself no match for the gateship.
+	*	title:  "Sol"
+		content:
+			>	Therefore, we have a second surprise: to destroy the gateship, we’ll be
+			>	pushing a series of large, unstable asteroids into the Sol system
+			>	through small jumpstreams from the Fergason Belt. Of course, a collision
+			>	with one of these unstable asteroids would annihilate your heavy
+			>	cruiser, but your task is to alter the course of the asteroids so that
+			>	they collide with the gateship.
+	*	initial:  2
+		title:    "Gate Ship"
+		content:
+			>	We doubt that the gateship is capable of forming another jumpgate in its
+			>	damaged state. Some of its weapons may also be inoperable. We estimate,
+			>	though, that it will take two or more collisions with asteroids to
+			>	destroy the gateship.
+	*	title:  "Sol"
+		content:
+			>	While you’re engaging the gateship, the remaining human carriers will be
+			>	launching a major assault lightyears away in the Upsilon Andromeda
+			>	system. Although the humans are expecting heavy losses, this assault is
+			>	merely intended to draw the Cantharan fleet away from Sol and the
+			>	Cantharan gateship. They are depending on you to deliver them a
+			>	liberated Earth. You must not fail.
+starmap:  {left: 268, top: 31, right: 300, bottom: 55}
+par:
+	time:    "10m"
+	kills:   50
+	losses:  0
+epilogue:
+	>	#+Blog/starfield/a
+	|	#+log/ares-returns
+	|	The Earth you left over one hundred and fifty years ago is greatly
+	>	changed. The people you knew are long since dead, and the place you
+	>	called home no longer exists.
+	>
+	>	#+
+	|	But neither time nor the Cantharans could destroy what you fought to
+	>	salvage: humanity. A mercy you eventually found outside of mankind.
+	>
+	>	#+
+	|	You will be welcomed as a hero, to be sure. The individuals will be
+	>	honored, and the crew of the Ares may even become legends.
+	>
+	>	#+
+	|	But the greatest victories this day do not belong to men. They belong to
+	>	humanity. They belong to our unending faith in our place in the
+	>	universe. And now humanity, with due arrogance, will claim that place.
+no_ships:
+	>	Your last hope, the specially enhanced heavy cruiser, was destroyed.
+	>	Earth was almost yours.

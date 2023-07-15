@@ -1,0 +1,93 @@
+type:     "solo"
+chapter:  2
+title:
+	>	\i Capítulo 1
+	|	\iVia Rapida
+players:
+
+		name:           "Cooperación Humana Ishiman"
+
+		name:           "La Unión Gaitori"
+
+status:
+	*	text:       "Desturye los 5"
+	*	text:       "transportes."
+
+	*	prefix:     "Remaining: "
+
+
+initials:
+
+			name:    "Charon Station"
+			sprite:  "loc/bunker"
+		earning:   1.0
+
+conditions:
+
+		action:
+
+				text:
+					>   Has destruido los cinco transportes Gaitori, impidiendo que llegaran 
+					>   refuerzos a la base Gaitori.
+briefings:
+	*	title:  "Sistema Charon"
+		content:
+			>	Welcome to your first combat mission, humans. In the Charon System, the
+			>	Gaitori have just established a new base near our space. A small convoy
+			>	of sublight transports is shuttling in a battalion of Gaitori
+			>	reinforcements, a blatantly aggressive act. Your mission in the Charon
+			>	System is to intercept and destroy the five transports.
+	*	initial:  6
+		title:    "Cruiser"
+		content:
+			>	^Pish/cruiser^For this mission you will have a single cruiser. Its
+			>	combination of maneuverability and medium armament make it a useful
+			>	small offensive vessel. The fusion pulse gun is fairly powerful, and the
+			>	ship is stocked with 50 fusion pulse charges. The photokinetic beam
+			>	cannon is an energy based supplement to this weapon.
+	*	initial:  1
+		title:    "Transport"
+		content:
+			>	^Pgai/transport^Use your superlight boosters to quickly traverse the
+			>	length of the convoy, stopping to destroy each of the five transports.
+	*	initial:  7
+		title:    "Fighter"
+		content:
+			>	^Pgai/fighter^The transports are being escorted by an assortment of
+			>	Gaitori fighters and cruisers. Their primary weapons are kinetic laser
+			>	cannons, and concussive pellet guns, neither of which are very
+			>	damaging.^Pgai/cruiser^
+	*	initial:  0
+		title:    "Charon Station"
+		content:
+			>	^Pbrf/habitat^If any one of the transports reaches the Gaitori base, the
+			>	mission will be aborted. Good luck.
+starmap:  {left: 314, top: 275, right: 346, bottom: 299}
+par:
+	time:    "2m"
+	kills:   9
+	losses:  0
+prologue:
+	>	#+Blog/starfield/a
+	|	\i PART 1 
+	|	\i 
+	|	#+gai/race
+	|	The Gaitori, ruthless mercenaries and minions of the Cantharan Order,
+	>	are the first enemy you must face in your quest for Earth. The Gaitori
+	>	Union, once an interstellar trading empire that linked the many
+	>	disparate space-faring civilizations together, was brought to its knees
+	>	by the Order, and now serves as sentry on the Cantharan frontier. 
+	>
+	>	#+
+	|	Although disorganized and thinly dispersed along the Los-Selactos line,
+	>	the Gaitori navy insulates the Order from the systems in the galactic
+	>	south. To reach Earth, you must first punch a hole through this border
+	>	zone.
+	>
+	>	#+
+	|	Under the guidance of the Ishimans, you will launch your initial strike
+	>	against the Gaitori, and test your prowess in battle for the first time.
+	>	You brace your crew for confrontation.
+no_ships:
+	>	You lost your ship. The Gaitori military has reinforced their outpost
+	>	near Ishiman space, and put a quick end to your quest.

@@ -1,0 +1,102 @@
+type:     "solo"
+chapter:  25
+title:
+	>	\i **DEV-23** 
+	|	\i 
+players:
+	*	type:           "human"
+		race:           "ish"
+		name:           "The Human/Ishiman Cooperative"
+		earning_power:  1.0
+	*	type:           "cpu"
+		race:           "ish"
+		name:           "The Human/Ishiman Cooperative"
+		earning_power:  1.0
+		hue:            "salmon"
+	*	type:           "cpu"
+		race:           "aud"
+		name:           "The Audemedon Axis"
+		earning_power:  2.0
+song:  "targetron"
+initials:
+	*	base:   "loc/planet"
+		owner:  0
+		at:     {x: 9000, y: 0}
+		override:
+			name:    "Proteus Alpha"
+			sprite:  "loc/planets/uglypaint"
+		earning:  1.0
+		build:
+			*	"fighter"
+			*	"cruiser"
+			*	"gunship"
+			*	"carrier"
+			*	"hvd"
+			*	"transport"
+	*	base:   "loc/planet"
+		owner:  1
+		at:     {x: -9000, y: 0}
+		override:
+			name:    "Proteus Beta"
+			sprite:  "loc/planets/calmpurple"
+		earning:  1.0
+		build:
+			*	"fighter"
+			*	"cruiser"
+			*	"gunship"
+			*	"carrier"
+			*	"hvd"
+			*	"transport"
+	*	base:   "loc/planet"
+		owner:  2
+		at:     {x: 0, y: 9000}
+		override:
+			name:    "Proteus Gamma"
+			sprite:  "loc/planets/yerrear"
+		earning:  1.0
+		build:
+			*	"fighter"
+			*	"cruiser"
+			*	"gunship"
+			*	"carrier"
+			*	"hvd"
+			*	"transport"
+	*	base:      "hvd"
+		owner:     0
+		at:        {x: 9000, y: 0}
+		flagship:  true
+		target:    {initial: 0}
+	*	base:      "hvd"
+		owner:     1
+		at:        {x: -9000, y: 0}
+		flagship:  true
+		target:    {initial: 1}
+	*	base:      "hvd"
+		owner:     2
+		at:        {x: 0, y: 9000}
+		flagship:  true
+		target:    {initial: 2}
+conditions:
+	*	when:
+			type:   "count"
+			op:     "eq"
+			value:  3
+			of:
+				*	type:    "owner"
+					object:  {initial: 0}
+					op:      "eq"
+					player:  0
+				*	type:    "owner"
+					object:  {initial: 1}
+					op:      "eq"
+					player:  0
+				*	type:    "owner"
+					object:  {initial: 2}
+					op:      "eq"
+					player:  0
+		action:
+			*	type:    "win"
+				player:  0
+				text:
+					>	You conquered Proteus Beta and Gamma.
+starmap:  {left: 5, top: 46, right: 63, bottom: 65}

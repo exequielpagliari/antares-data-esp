@@ -1,0 +1,94 @@
+type:  "net"
+title:
+	>	\i Spaze Warz 
+	|	\i 
+players:
+	*	type:  "human"
+		races:
+			*	"gro"
+	*	type:  "human"
+		races:
+			*	"gro"
+song:  "eyes-of-fire"
+initials:
+	*	base:      "gro/cruiser"
+		owner:     0
+		at:        {x: -2956, y: 0}
+		flagship:  true
+	*	base:      "gro/cruiser"
+		owner:     1
+		at:        {x: 2955, y: 87}
+		flagship:  true
+	*	base:      "loc/flak"
+		at:        {x: 0, y: -700}
+	*	base:      "loc/flak"
+		at:        {x: -700, y: 0}
+	*	base:      "loc/flak"
+		at:        {x: 700, y: 0}
+conditions:
+	*	when:
+			type:    "destroyed"
+			op:      "eq"
+			object:  {initial: 0}
+			value:   true
+		action:
+			*	type:       "score"
+				reflexive:  true
+				counter:    {player: 0, which: 0}
+				value:      1
+			*	type:       "delay"
+				duration:   "6s"
+			*	type:       "reveal"
+				reflexive:  true
+				initial:    [0]
+			*	type:       "condition"
+				enable:     [0]
+			*	type:       "check"
+	*	when:
+			type:    "destroyed"
+			op:      "eq"
+			object:  {initial: 1}
+			value:   true
+		action:
+			*	type:       "score"
+				reflexive:  true
+				counter:    {player: 1, which: 0}
+				value:      1
+			*	type:       "delay"
+				duration:   "6s"
+			*	type:       "reveal"
+				reflexive:  true
+				initial:    [1]
+			*	type:       "condition"
+				reflexive:  true
+				enable:     [1]
+			*	type:       "check"
+	*	when:
+			type:     "score"
+			op:       "ge"
+			counter:  {player: 0, which: 0}
+			value:    3
+		action:
+			*	type:       "win"
+				reflexive:  true
+				player:     1
+				text:
+					>	Player 2 wins!
+	*	persistent:  true
+		when:
+			type:     "score"
+			op:       "ge"
+			counter:  {player: 1, which: 0}
+			value:    3
+		action:
+			*	type:       "win"
+				reflexive:  true
+				player:     0
+				text:
+					>	Player 1 wins!
+description:
+	>	Two dinky ships, one purpose: kill the other guy three times.
+own_no_ships:
+	>	All of your ships have been destroyed.
+foe_no_ships:
+	>	All of your opponent's ships have been destroyed.
