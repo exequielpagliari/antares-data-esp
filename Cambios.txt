@@ -1,0 +1,1 @@
+15/07/2023:  Se inicia el proyecto de traducción del juego Ares. Se utilizará el repositorio del proyecto Antares como fork para su implementación. 
