@@ -18,93 +18,18 @@ status:
 		underline:  true
 song:  "getalong"
 initials:
-	*	base:   "loc/power"
-		owner:  0
-		at:     {x: 0, y: 3739}
-		override:
-			name:  "Power Station O-2"
-		earning:  1.0
-	*	base:     "loc/power"
-		owner:    0
-		at:       {x: 3826, y: 2434}
-		override:
-			name:  "Power Station O-3"
-		earning:  1.0
-	*	base:     "loc/power"
-		owner:    0
-		at:       {x: -5043, y: 2173}
-		override:
-			name:  "Power Station O-1"
-		earning:  1.0
-	*	base:     "loc/power"
-		owner:    1
-		at:       {x: 0, y: -4434}
-		override:
-			name:  "Power Station G-2"
-		earning:  1.0
-	*	base:     "loc/power"
-		owner:    1
-		at:       {x: 5739, y: -4869}
-		override:
-			name:  "Power Station G-3"
-		earning:  1.0
-	*	base:     "loc/power"
-		owner:    1
-		at:       {x: -6521, y: -7739}
-		override:
-			name:  "Power Station G-1"
-		earning:  1.0
-	*	base:     "loc/flak"
-		owner:    0
-		at:       {x: 4032, y: 2477}
-	*	base:     "loc/flak"
-		owner:    0
-		at:       {x: -196, y: 3956}
-	*	base:     "loc/flak"
-		owner:    0
-		at:       {x: -5272, y: 2130}
-	*	base:     "loc/flak"
-		owner:    1
-		at:       {x: -6369, y: -7368}
-	*	base:     "loc/flak"
-		owner:    1
-		at:       {x: 141, y: -4282}
-	*	base:     "loc/flak"
-		owner:    1
-		at:       {x: 5532, y: -4716}
-	*	base:     "loc/planet"
-		owner:    0
-		at:       {x: 0, y: 9478}
+
 		override:
 			name:    "Hades Alpha"
 			sprite:  "loc/planets/sandyred"
 		earning:  1.0
 		build:
-			*	"fighter"
-			*	"cruiser"
-			*	"transport"
-			*	"engineer"
-	*	base:   "loc/moon"
-		owner:  1
-		at:     {x: 1652, y: -9130}
+
 		override:
 			name:    "Hades Beta"
 			sprite:  "loc/planets/marble-streakedpurple"
 		earning:  1.0
-		build:
-			*	"fighter"
-			*	"cruiser"
-			*	"gunship"
-			*	"transport"
-			*	"engineer"
-	*	base:      "ish/cruiser"
-		owner:     0
-		at:        {x: 956, y: 8782}
-		flagship:  true
-	*	base:      "gai/gunship"
-		owner:     1
-		at:        {x: -86, y: -9130}
-conditions:
+
 	*	when:
 			type:    "owner"
 			op:      "eq"
