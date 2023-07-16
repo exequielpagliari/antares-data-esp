@@ -1,0 +1,45 @@
+Welcome to your first combat mission, humans. In the Charon System, the Gaitori have just established a new base near our space. A small convoy of sublight transports is shuttling in a battalion of Gaitori reinforcements, a blatantly aggressive act. Your mission in the Charon System is to intercept and destroy the five transports.
+
+
+Bienvenidos a su primera misión de combate, humanos. En el Sistema Caronte, los Gaitori acaban de establecer una nueva base cerca de nuestro espacio. Un pequeño convoy de transportes subluz está trasladando un batallón de refuerzos Gaitori, en un acto abiertamente agresivo. Su misión en el Sistema Caronte es interceptar y destruir los cinco transportes
+
+
+>	^Pish/cruiser^For this mission you will have a single cruiser. Its combination of maneuverability and medium armament make it a useful small offensive vessel. The fusion pulse gun is fairly powerful, and the ship is stocked with 50 fusion pulse charges. The photokinetic beam cannon is an energy based supplement to this weapon.
+
+
+Para esta misión tendrás un único crucero. Su combinación de maniobrabilidad y armamento medio lo convierten en una útil embarcación ofensiva de pequeño tamaño. El cañón de pulso de fusión es bastante potente y la nave está equipada con 50 cargas de pulso de fusión. El cañón de haz fotocinético es un complemento basado en energía para esta arma.
+
+
+>	^Pgai/transport^Use your superlight boosters to quickly traverse the length of the convoy, stopping to destroy each of the five transports.
+
+
+Utiliza tus propulsores superlumínicos para atravesar rápidamente la longitud del convoy, deteniéndote para destruir cada uno de los cinco transportes.
+
+
+>	^Pgai/fighter^The transports are being escorted by an assortment of Gaitori fighters and cruisers. Their primary weapons are kinetic laser cannons, and concussive pellet guns, neither of which are very damaging.^Pgai/cruiser^
+
+
+Los transportes están siendo escoltados por una variedad de cazas y cruceros Gaitori. Sus armas principales son cañones láser cinéticos y pistolas de proyectiles concusivos, ninguno de los cuales causa mucho daño.
+
+
+>	^Pbrf/habitat^If any one of the transports reaches the Gaitori base, the mission will be aborted. Good luck.
+
+
+Si alguno de los transportes llega a la base Gaitori, la misión será abortada. Buena suerte.
+
+
+prologue:
+	>	#+Blog/starfield/a
+	|	\i PART 1 
+	|	\i 
+	|	#+gai/race
+	|	The Gaitori, ruthless mercenaries and minions of the Cantharan Order, are the first enemy you must face in your quest for Earth. The Gaitori Union, once an interstellar trading empire that linked the many disparate space-faring civilizations together, was brought to its knees by the Order, and now serves as sentry on the Cantharan frontier. 
+	>
+	>	#+
+	|	Although disorganized and thinly dispersed along the Los-Selactos line, the Gaitori navy insulates the Order from the systems in the galactic south. To reach Earth, you must first punch a hole through this border zone.
+	>
+	>	#+
+	|	Under the guidance of the Ishimans, you will launch your initial strike against the Gaitori, and test your prowess in battle for the first time.
+	You brace your crew for confrontation.
+no_ships:
+	>	You lost your ship. The Gaitori military has reinforced their outpost near Ishiman space, and put a quick end to your quest.

@@ -1,0 +1,16 @@
+^Pish/cruiser^  ---> Intuyo que el comando ^Pish/"NombreImagen"^ es para llamar a la imagen del recuadro.
+
+prologue:
+>	#+Blog/starfield/a
+	|	\i PART 1 
+	|	\i 
+	|	#+gai/race
+	|	The Gaitori, ruthless mercenaries and minions of the
+	
+	
+prologue:	---> Inicia un Prólogo visual
+	>	#+Blog/starfield/a ---> Es el encabezado
+		|	\i PART 1  ---> Título del prólogo
+	    |	\i         ---> Retorno
+	    |	#+gai/race ---> Imagen
+	    |              ---> Inicio de párrafo

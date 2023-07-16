@@ -32,36 +32,36 @@ conditions:
 briefings:
 	*	title:  "Sistema Charon"
 		content:
-			>	Welcome to your first combat mission, humans. In the Charon System, the
-			>	Gaitori have just established a new base near our space. A small convoy
-			>	of sublight transports is shuttling in a battalion of Gaitori
-			>	reinforcements, a blatantly aggressive act. Your mission in the Charon
-			>	System is to intercept and destroy the five transports.
+			>	Bienvenidos a su primera misión de combate, humanos. En el Sistema Caronte, los
+			>	Gaitori acaban de establecer una nueva base cerca de nuestro espacio. Un pequeño convoy
+			>	de transportes subluz está trasladando un batallón de refuerzos
+			>	Gaitori, en un acto abiertamente agresivo. Su misión en el Sistema Caronte
+			>	es interceptar y destruir los cinco transportes.
 	*	initial:  6
-		title:    "Cruiser"
+		title:    "crucero"
 		content:
-			>	^Pish/cruiser^For this mission you will have a single cruiser. Its
-			>	combination of maneuverability and medium armament make it a useful
-			>	small offensive vessel. The fusion pulse gun is fairly powerful, and the
-			>	ship is stocked with 50 fusion pulse charges. The photokinetic beam
-			>	cannon is an energy based supplement to this weapon.
+			>	^Pish/cruiser^ara esta misión tendrás un único crucero. Su
+			>	combinación de maniobrabilidad y armamento medio lo convierten en una útil
+			>	embarcación ofensiva de pequeño tamaño. El cañón de pulso de fusión es bastante potente y la
+			>	ave está equipada con 50 cargas de pulso de fusión. El cañón de haz fotocinético
+			>	es un complemento basado en energía para esta arma.
 	*	initial:  1
-		title:    "Transport"
+		title:    "Transporte"
 		content:
-			>	^Pgai/transport^Use your superlight boosters to quickly traverse the
-			>	length of the convoy, stopping to destroy each of the five transports.
+			>	^Pgai/transport^Utiliza tus propulsores superlumínicos para atravesar rápidamente la
+			>	la longitud del convoy, deteniéndote para destruir cada uno de los cinco transportes.
 	*	initial:  7
 		title:    "Fighter"
 		content:
-			>	^Pgai/fighter^The transports are being escorted by an assortment of
-			>	Gaitori fighters and cruisers. Their primary weapons are kinetic laser
-			>	cannons, and concussive pellet guns, neither of which are very
-			>	damaging.^Pgai/cruiser^
+			>	^Pgai/fighter^Los transportes están siendo escoltados por una variedad de
+			>	azas y cruceros Gaitori. Sus armas principales son cañones láser
+			>	y pistolas de proyectiles concusivos, ninguno de los cuales causa
+			>	mucho daño.^Pgai/cruiser^
 	*	initial:  0
-		title:    "Charon Station"
+		title:    "Estación Charon"
 		content:
-			>	^Pbrf/habitat^If any one of the transports reaches the Gaitori base, the
-			>	mission will be aborted. Good luck.
+			>	^Pbrf/habitat^Si alguno de los transportes llega a la base Gaitori, la
+			>	misión será abortada. Buena suerte.
 starmap:  {left: 314, top: 275, right: 346, bottom: 299}
 par:
 	time:    "2m"
