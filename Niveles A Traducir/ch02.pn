@@ -1,24 +1,24 @@
 type:     "solo"
 chapter:  4
 title:
-	>	\i Chapter 2 
-	|	\iThe Stars Have Ears
+	>	\i Capítulo 2 
+	|	\iLas Estrellas Tienen Oídos
 players:
 	*	type:           "human"
 		race:           "ish"
-		name:           "The Human/Ishiman Cooperative"
+		name:           "Cooperación Humana Ishiman"
 		earning_power:  0.004
 	*	type:           "cpu"
 		race:           "gai"
-		name:           "The Gaitori Union"
+		name:           "La Unión Gaitori"
 status:
-	*	text:       "Destroy all 4"
-	*	text:       "relay dishes."
+	*	text:       "Destruye las 4"
+	*	text:       "antenas parabólicas."
 
-	*	prefix:     "Remaining: "
+	*	prefix:     "Faltantes: "
 
 		override:
-			name:    "Myrmidon Station"
+			name:    "Estación Myrmidon"
 			sprite:  "loc/habitat"
 		
 conditions:
@@ -28,7 +28,7 @@ conditions:
 				player:  0
 				next:    "tut3"
 				text:
-					>	Mission completed. You destroyed all four of the sensor relay dishes.
+					>	Misión completada. Has destruido los cuatro sensores de las antenas parabólicas.
 	*	when:
 			type:    "destroyed"
 			op:      "eq"
@@ -38,7 +38,7 @@ conditions:
 			*	type:    "win"
 				player:  1
 				text:
-					>	You lost your heavy cruiser, failing to destroy all four relay dishes.
+					>	Perdiste tu crucero pesado, fallaste al no lograr destruir las cuatro antenas parabólicas.
 	*	when:
 			type:    "destroyed"
 			

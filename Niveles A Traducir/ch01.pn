@@ -2,7 +2,7 @@ type:     "solo"
 chapter:  2
 title:
 	>	\i Capítulo 1
-	|	\iVia Rapida
+	|	\iVía Rápida
 players:
 
 		name:           "Cooperación Humana Ishiman"
@@ -38,7 +38,7 @@ briefings:
 			>	Gaitori, en un acto abiertamente agresivo. Su misión en el Sistema Caronte
 			>	es interceptar y destruir los cinco transportes.
 	*	initial:  6
-		title:    "crucero"
+		title:    "Crucero"
 		content:
 			>	^Pish/cruiser^ara esta misión tendrás un único crucero. Su
 			>	combinación de maniobrabilidad y armamento medio lo convierten en una útil
@@ -51,7 +51,7 @@ briefings:
 			>	^Pgai/transport^Utiliza tus propulsores superlumínicos para atravesar rápidamente la
 			>	la longitud del convoy, deteniéndote para destruir cada uno de los cinco transportes.
 	*	initial:  7
-		title:    "Fighter"
+		title:    "Caza"
 		content:
 			>	^Pgai/fighter^Los transportes están siendo escoltados por una variedad de
 			>	azas y cruceros Gaitori. Sus armas principales son cañones láser
@@ -69,25 +69,25 @@ par:
 	losses:  0
 prologue:
 	>	#+Blog/starfield/a
-	|	\i PART 1 
+	|	\i PARTE 1 
 	|	\i 
 	|	#+gai/race
-	|	The Gaitori, ruthless mercenaries and minions of the Cantharan Order,
-	>	are the first enemy you must face in your quest for Earth. The Gaitori
-	>	Union, once an interstellar trading empire that linked the many
-	>	disparate space-faring civilizations together, was brought to its knees
-	>	by the Order, and now serves as sentry on the Cantharan frontier. 
+	|	Los Gaitori, despiadados mercenarios y lacayos de la Orden Cantharana,
+	>	son el primer enemigo al que debes enfrentarte en tu búsqueda de la Tierra. La Unión
+	>	Gaitori, en su momento un imperio comercial interestelar que conectaba a muchas
+	>	civilizaciones espaciales dispares, fue derrotada por 
+	>	la Orden y ahora sirve como guardián en la frontera Cantharana. 
 	>
 	>	#+
-	|	Although disorganized and thinly dispersed along the Los-Selactos line,
-	>	the Gaitori navy insulates the Order from the systems in the galactic
-	>	south. To reach Earth, you must first punch a hole through this border
-	>	zone.
+	|	Aunque desorganizada y dispersa a lo largo de la línea Los-Selactos,
+	>	la armada Gaitori aísla a la Orden de los sistemas en el sur
+	>	galáctico. TPara llegar a la Tierra, primero debes abrirte paso a través de esta
+	>	zona fronteriza.
 	>
 	>	#+
-	|	Under the guidance of the Ishimans, you will launch your initial strike
-	>	against the Gaitori, and test your prowess in battle for the first time.
-	>	You brace your crew for confrontation.
+	|	Bajo la guía de los Ishimans, lanzarás tu primer ataque
+	>	contra los Gaitori, y pondrás a prueba tu destreza en la batalla por primera vez.
+	>	Preparas a tu tripulación para el enfrentamiento.
 no_ships:
-	>	You lost your ship. The Gaitori military has reinforced their outpost
-	>	near Ishiman space, and put a quick end to your quest.
+	>	Has perdido tu nave. TEl ejército Gaitori ha reforzado su puesto avanzado
+	>	cerca del espacio Ishiman y ha puesto fin rápidamente a tu búsqueda.
