@@ -1,128 +1,34 @@
 type:     "solo"
 chapter:  4
 title:
-	>	\i Chapter 2 
-	|	\iThe Stars Have Ears
+	>	\i Capítulo 2 
+	|	\iLas Estrellas Tienen Oídos
 players:
 	*	type:           "human"
 		race:           "ish"
-		name:           "The Human/Ishiman Cooperative"
+		name:           "Cooperación Humana Ishiman"
 		earning_power:  0.004
 	*	type:           "cpu"
 		race:           "gai"
-		name:           "The Gaitori Union"
+		name:           "La Unión Gaitori"
 status:
-	*	text:       "Destroy all 4"
-	*	text:       "relay dishes."
-		underline:  true
-	*	prefix:     "Remaining: "
-		minuend:    4
-		counter:    {player: 0, which: 0}
-		suffix:     "/4"
-song:  "yesterday"
-initials:
-	*	base:   "loc/relay"
-		owner:  1
-		at:     {x: 7043, y: 4521}
+	*	text:       "Destruye las 4"
+	*	text:       "antenas parabólicas."
+
+	*	prefix:     "Faltantes: "
+
 		override:
-			name:  "Relay Dish 1"
-		earning:   1.0
-	*	base:      "ish/hvc"
-		owner:     0
-		at:        {x: 7652, y: 8695}
-		flagship:  true
-	*	base:      "gai/cruiser"
-		owner:     1
-		at:        {x: 6434, y: 4695}
-		target:    {initial: 0, lock: true}
-	*	base:      "gai/cruiser"
-		owner:     1
-		at:        {x: 2608, y: 2086}
-		target:    {initial: 16, lock: true}
-	*	base:      "gai/cruiser"
-		owner:     1
-		at:        {x: 3739, y: 2434}
-		target:    {initial: 16, lock: true}
-	*	base:      "gai/gunship"
-		owner:     1
-		at:        {x: -347, y: -1913}
-		target:    {initial: 17, lock: true}
-	*	base:      "gai/cruiser"
-		owner:     1
-		at:        {x: -1130, y: -2347}
-		target:    {initial: 17, lock: true}
-	*	base:      "gai/cruiser"
-		owner:     1
-		at:        {x: -347, y: -2782}
-		target:    {initial: 17, lock: true}
-	*	base:      "gai/gunship"
-		owner:     1
-		at:        {x: -1043, y: -5043}
-		target:    {initial: 18, lock: true}
-	*	base:      "gai/cruiser"
-		owner:     1
-		at:        {x: -2695, y: -4173}
-		target:    {initial: 18, lock: true}
-	*	base:      "gai/cruiser"
-		owner:     1
-		at:        {x: -1826, y: -4434}
-		target:    {initial: 18, lock: true}
-	*	base:      "gai/cruiser"
-		owner:     1
-		at:        {x: -1913, y: -4956}
-		target:    {initial: 18, lock: true}
-	*	base:      "obi/escort"
-		owner:     0
-		at:        {x: -8695, y: 6782}
-		hide:      true
-		target:    {initial: 1}
-	*	base:      "obi/escort"
-		owner:     0
-		at:        {x: -6695, y: 8347}
-		hide:      true
-		target:    {initial: 1}
-	*	base:      "loc/bunker"
-		owner:     1
-		at:        {x: -1652, y: -4173}
-		override:
-			name:    "Myrmidon Station"
+			name:    "Estación Myrmidon"
 			sprite:  "loc/habitat"
-		earning:  1.0
-	*	base:     "loc/sun"
-		at:       {x: 0, y: 0}
-		override:
-			name:  "Myrmidon"
-	*	base:   "loc/relay"
-		owner:  1
-		at:     {x: 3217, y: 2000}
-		override:
-			name:  "Relay Dish 2"
-		earning:  1.0
-	*	base:     "loc/relay"
-		owner:    1
-		at:       {x: 2000, y: -1130}
-		override:
-			name:  "Relay Dish 3"
-		earning:  1.0
-	*	base:     "loc/relay"
-		owner:    1
-		at:       {x: 1043, y: -4347}
-		override:
-			name:  "Relay Dish 4"
-		earning:  1.0
+		
 conditions:
-	*	persistent:  true
-		when:
-			type:     "score"
-			op:       "eq"
-			counter:  {player: 0, which: 0}
-			value:    4
+
 		action:
 			*	type:    "win"
 				player:  0
 				next:    "tut3"
 				text:
-					>	Mission completed. You destroyed all four of the sensor relay dishes.
+					>	Misión completada. Has destruido los cuatro sensores de las antenas parabólicas.
 	*	when:
 			type:    "destroyed"
 			op:      "eq"
@@ -132,90 +38,82 @@ conditions:
 			*	type:    "win"
 				player:  1
 				text:
-					>	You lost your heavy cruiser, failing to destroy all four relay dishes.
+					>	Perdiste tu crucero pesado, fallaste al no lograr destruir las cuatro antenas parabólicas.
 	*	when:
 			type:    "destroyed"
-			op:      "eq"
-			object:  {initial: 17}
-			value:   true
+			
 		action:
-			*	type:       "reveal"
-				reflexive:  true
-				initial:    [12]
-			*	type:       "reveal"
-				reflexive:  true
-				initial:    [13]
-			*	type:       "delay"
-				duration:   "2s"
+			
 			*	type:       "message"
 				reflexive:  true
 				pages:
-					*	>	\i INCOMING TRANSMISSION \i SECURE KEY OK - NW3 TIGHT BEAM
-						|	SOURCE: OMV Treejumper, Escort 3856
-						|	Humans: your bravery has impressed us. We are honored to offer our
-						>	assistance in the destruction of the relay dishes. Stand by. \i<EOT>\i 
+					*	>	\i TRANSMISIÓN ENTRANTE \i CLAVE SEGURA OK  - NW3 TIGHT BEAM
+						|	SOURCE: FUENTE: OMV Treejumper, Escolta 3856
+						|	Humanos: vuestra valentía nos ha impresionado. Nos sentimos honrados de ofrecer nuestra
+						>	ayuda en la destrucción de las antenas parabólicas de retransmisión. Permaneced preparados. \i<EOT>\i 
 briefings:
 	*	initial:  15
 		title:    "Myrmidon"
 		content:
-			>	The Gaitori in this system have deployed a series of long-range scanner
-			>	relay dishes, designed to gather information on our ship movements.
+			>	Los Gaitori en este sistema han desplegado una serie de antenas parabólicas
+			>	con un escáner de largo alcance, diseñados para recopilar información sobre 
+			nuestros movimientos tácticos.
 			>
-			>	You are to put an end to this intrusion by destroying all four relay
-			>	stations.
+			>	Tu misión es poner fin a esta intrusión destruyendo las cuatro estaciones 
+			>	de retransmisión.
 	*	initial:  1
-		title:    "Cruiser"
+		title:    "Cursero"
 		content:
-			>	^Pish/hvc^You'll be dropped in here. Your only ship for this mission is
-			>	this heavy cruiser. It's speedier than the standard cruiser, and has an
-			>	improved rapid-fire fusion pulse gun. Save your guided missiles for
-			>	difficult targets. If you lose the cruiser, the mission will be aborted.
+			>	^Pish/hvc^Serás desplegado aquí. Tu única nave para esta misión es este
+			>	crucero pesado. Es más rápido que el crucero estándar y tiene un cañón
+			>	 de pulso de fusión de disparo rápido mejorado. Guarda tus misiles
+			>   guiados para los objetivos difíciles. Si pierdes el crucero, la misión será abortada.
 	*	initial:  0
-		title:    "Relay Dish 1"
+		title:    "Antena Parabólica 1"
 		content:
-			>	^Pbrf/relay^This the the first of the four Relay Stations you should
-			>	destroy. The stations are unarmed, and are only protected by deflector
-			>	shields.
+			>	^Pbrf/relay^Este es el primero de los cuatro platos de retransmisión que debes destruir.
+			>	Las estaciones no tienen armamento y solo están protegidas por escudos 
+			>	deflectores.
 	*	initial:  2
-		title:    "Cruiser"
+		title:    "Crucero"
 		content:
-			>	^Pgai/cruiser^There are Gaitori cruisers stationed at each dish. Their
-			>	cruisers are slow, but are armed with rapid-fire concussive pellet
-			>	guns. 
+			>	^Pgai/cruiser^Hay cruceros Gaitori estacionados en cada plato. Sus
+			>	cruceros son lentos, pero están armados con cañones de proyectiles
+			>	concusivos de disparo rápido. 
 	*	initial:  16
-		title:    "Relay Dish 2"
+		title:    "Antena Parabólica 2"
 		content:
-			>	This is dish is your second target.
+			>	Este es tu segundo objetivo.
 	*	initial:  17
-		title:    "Relay Dish 3"
+		title:    "Antena Parabólica 3"
 		content:
-			>	The third dish is your next target.
-			|	^Pgai/gunship^This dish is being guarded by a gunship. Gaitori gunships
-			>	are not heavily armored, but they have converted atomic pulse mining
-			>	guns, which fire powerful long-range homing pulses.
+			>	El tercer plato es tu próximo objetivo.
+			|	^Pgai/gunship^Esta antena está siendo custodiada por una nave de guerra. Las naves de guerra
+			>	Gaitori no están muy blindadas, pero tienen cañones de minería de pulso de
+			>	conversión atómica, que disparan pulsos poderosos de largo alcance con capacidad de seguimiento.
 	*	initial:  18
-		title:    "Relay Dish 4"
+		title:    "Antena Parabólica 4"
 		content:
-			>	This is the last Relay Station you should destroy. With a gunship and
-			>	two cruisers nearby, it's the most heavily guarded.
+			>	Esta es la última Estacíon de Retransmisión que debes destruir. Con una nave de guerra 
+			>	y dos cruceros cercanos, es el más fuertemente custodiado.
 	*	initial:  14
-		title:    "Myrmidon Station"
+		title:    "Estación Myrmidon"
 		content:
-			>	^Pbrf/habitat^The Gaitori habitat station in the Myrmidon System is
-			>	heavily armed. We recommend that you keep a safe distance from this
-			>	station.
-	*	title:  "Obish Escorts"
+			>	^Pbrf/habitat^La estación hábitat Gaitori en el Sistema Myrmidon 
+			>	está fuertemente armada. Recomendamos que mantengas una distancia segura de esta
+			>	estación.
+	*	title:  "Escoltas Obish"
 		content:
-			>	^Pobi/escort^A pair of Obish escorts is in the region. They've expressed
-			>	an interest in aiding us in destroying the Relay Stations, but have
-			>	indicated that they would like to observe your progress first. They may
-			>	choose to join you during the mission. The Obish Escorts have Salrilian
-			>	stealth fields and Ishiman core pulse guns.
+			>	^Pobi/escort^Hay un par de escoltas Obish en la región. Han expresado
+			>	interés en ayudarnos a destruir las Estaciones de Retransmisión, pero
+			>	indicaron que les gustaría observar tu progreso primero. Pueden
+			>	decidir unirse a ti durante la misión. Las Escoltas Obish tienen
+			>	campos de sigilo salrilianos y cañones de pulso del núcleo ishiman.
 starmap:  {left: 377, top: 270, right: 409, bottom: 294}
 par:
 	time:    "2m"
 	kills:   10
 	losses:  0
 no_ships:
-	>	Your ship was destroyed. We cannot supply you with vessels if you are
-	>	this poor a pilot.
+	>	Tu nave fue destruida. No podemos proporcionarte naves
+	>	si eres tan mal piloto.

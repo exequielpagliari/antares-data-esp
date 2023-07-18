@@ -6,3 +6,8 @@
            -    Se utilizará ChatGPT para la traducción del juego. 
            -    Detección de falla en representación de caracteres especiales del idioma español ej: íóáñ.
            
+17/07/2023:
+           -    Obtenida solución de representación de caracteres especiales.
+18/07/2023:
+           -    Traducción de segundo nivel.
+           
