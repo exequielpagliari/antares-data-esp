@@ -1,0 +1,83 @@
+A civilian Obish vessel was seized by a rogue band of Gaitori mercenaries, loyalists to the Order. The mercenaries are holding the surviving Obiards captive in a group of deep space cells. Your mission in the Elysium System is to help the Obish rescue the hostages.
+
+Una nave civil Obish fue capturada por una banda de mercenarios Gaitori rebeldes, leales a la Orden. Los mercenarios tienen cautivos a los Obiards supervivientes en un grupo de celdas en el espacio profundo. Tu misión en el Sistema Elysium es ayudar a los Obish a rescatar a los rehenes.
+
+
+^Pbrf/thrntz^This mission has special significance. We have confirmed that one of the Obiards being held is Ambassador Thrntz, a key negotiator in the Obain/Gaitor Nonaggression Pact. His safe return would win you considerable favor with the Obiards.
+
+
+
+^Pbrf/thrntz^Esta misión tiene una importancia especial. Hemos confirmado que uno de los Obiards que está siendo retenido es el Embajador Thrntz, un negociador clave en el Pacto de No Agresión Obain/Gaitor. Su regreso seguro te ganaría un favor considerable con los Obish.
+
+
+
+
+You will be conducting this mission from a heavy cruiser. There is little margin for error in this enterprise; conservation of your heavy cruiser’s resources will be vital for success.
+
+Realizarás esta misión desde un crucero pesado. Hay poco margen de error en esta empresa; la conservación de los recursos de tu crucero pesado será vital para el éxito.
+
+
+
+To pick up the prisoners, you'll be escorting this sublight Obish
+transport. It is armed with minimal defensive lasers capable of breaking
+the deep space cells open. Once a cell is breached, the prisoners will
+escape and attempt to enter the transport.
+
+The Obish prisoners will be vulnerable to your weapons fire, since your
+targeting systems will not be keyed to their suits. Be careful not to
+catch them in crossfire. They will also be disoriented, so give them
+plenty of time to enter the transport.
+
+Para recoger a los prisioneros, estarás escoltando este transporte Obish de velocidad sublumínica. Está armado con láseres defensivos mínimos capaces de abrir las celdas en el espacio profundo. Una vez que se abra una celda, los prisioneros escaparán e intentarán ingresar al transporte.
+
+Los prisioneros Obish serán vulnerables al fuego de tus armas, ya que tus sistemas de apuntado no estarán ajustados a sus trajes. Ten cuidado de no atraparlos en el fuego cruzado. También estarán desorientados, así que dales suficiente tiempo para ingresar al transporte.
+
+
+
+
+
+
+There are three deep space cells, each holding five Obiards. Command the
+transport to each cell in turn, then allow it to break open the cell and
+pick up the prisoners. The cells will be guarded, and your transport
+will need protection.
+
+Hay tres celdas en el espacio profundo, cada una con cinco Obiards. Ordena al transporte que vaya a cada celda sucesivamente, y luego permítele abrir la celda y recoger a los prisioneros. Las celdas estarán custodiadas y tu transporte necesitará protección.
+
+
+The transport can carry all five Obiards contained in a deep space cell.
+When the transport has picked up the prisoners at a cell, command it to
+return to this waiting Obish passenger liner. The Obiards will exit the
+transport and enter the liner.
+
+
+El transporte puede llevar a los cinco Obiards contenidos en una celda en el espacio profundo. Cuando el transporte haya recogido a los prisioneros en una celda, ordénale que regrese a este transatlántico de pasajeros Obish en espera. Los Obiards saldrán del transporte y entrarán al transatlántico.
+
+
+In addition to the ships guarding the cells, there are several squadrons
+of Gaitori fighters and cruisers on maneuvers in the vicinity. You
+should monitor the transport's position closely, as enemy cruisers could
+appear and quickly overtake the transport at any time. Don’t stray too
+far from the transport’s side.
+
+Además de las naves que custodian las celdas, hay varios escuadrones de cazas y cruceros Gaitori maniobrando en las cercanías. Deberás monitorear de cerca la posición del transporte, ya que los cruceros enemigos podrían aparecer y alcanzar rápidamente al transporte en cualquier momento. No te alejes demasiado del transporte.
+
+
+
+An Obish cruiser will escort the transport. It is under the command of
+the Obiards, so it will not be available for you to control.
+
+Un crucero Obish escoltará al transporte. Está bajo el mando de los Obiards, por lo que no estará disponible para que lo controles.
+
+
+
+For the mission to be considered successful, you must rescue at least
+eleven of the fifteen total hostages. Good luck.
+
+Para que la misión se considere exitosa, debes rescatar al menos once de los quince rehenes totales. Buena suerte.
+
+
+
+You lost your ships without rescuing enough Obiards.
+
+Perdiste tus naves sin rescatar suficientes Obiards.

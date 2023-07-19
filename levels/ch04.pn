@@ -1,8 +1,8 @@
 type:     "solo"
 chapter:  7
 title:
-	>	\i Chapter 4 
-	|	\iShoplifter 1
+	>	\i Capítulo 4 
+	|	\iLadrón de tiendas 1
 players:
 	*	type:           "human"
 		race:           "ish"
@@ -181,8 +181,8 @@ conditions:
 				player:     0
 				next:       "ch05"
 				text:
-					>	You rescued more than two thirds of the Obish hostages. Ambassador
-					>	Thrntz extends his gratitude.
+					>	Rescataste a más de dos tercios de los rehenes Obish. El Embajador
+					>	Thrntz expresa su gratitud.
 	*	when:
 			type:     "score"
 			op:       "eq"
@@ -193,73 +193,73 @@ conditions:
 				reflexive:  true
 				player:     1
 				text:
-					>	Too many of the Obiards were killed in your rescue attempt for this
-					>	mission to be considered successful.
+					>	Se produjo la muerte de demasiados Obish en tu intento de rescate
+					>	como para considerar esta misión exitosa.
 briefings:
-	*	title:  "Elysium System"
+	*	title:  "Sistema Elysium"
 		content:
-			>	A civilian Obish vessel was seized by a rogue band of Gaitori
-			>	mercenaries, loyalists to the Order. The mercenaries are holding the
-			>	surviving Obiards captive in a group of deep space cells. Your mission
-			>	in the Elysium System is to help the Obish rescue the hostages.
-	*	title:  "Elysium System"
+			>	Una nave civil Obish fue capturada por una banda de mercenarios Gaitori rebeldes,
+			>   leales a la Orden. Los mercenarios tienen cautivos a los Obiards supervivientes
+			>   en un grupo de celdas en el espacio profundo. Tu misión en el Sistema Elysium es
+			>   ayudar a los Obish a rescatar a los rehenes
+	*	title:  "Sistema Elysium"
 		content:
-			>	^Pbrf/thrntz^This mission has special significance. We have confirmed
-			>	that one of the Obiards being held is Ambassador Thrntz, a key
-			>	negotiator in the Obain/Gaitor Nonaggression Pact. His safe return would
-			>	win you considerable favor with the Obiards.
+			>	^Pbrf/thrntz^Esta misión tiene una importancia especial. Hemos confirmado que uno
+			>   de los Obiards que está siendo retenido es el Embajador Thrntz, un negociador clave
+			>   en el Pacto de No Agresión Obain/Gaitor. Su regreso seguro te ganaría un favor
+			>   considerable con los Obish.
 	*	initial:  5
-		title:    "Heavy Cruiser"
+		title:    "Crucero Pesado"
 		content:
-			>	You will be conducting this mission from a heavy cruiser. There is
-			>	little margin for error in this enterprise; conservation of your heavy
-			>	cruiser’s resources will be vital for success.
+			>	Realizarás esta misión desde un crucero pesado. Hay poco margen de error en esta
+			>   empresa; la conservación de los recursos de tu crucero pesado será vital para el éxito.
 	*	initial:  1
-		title:    "Transport"
+		title:    "Transporte"
 		content:
-			>	To pick up the prisoners, you'll be escorting this sublight Obish
-			>	transport. It is armed with minimal defensive lasers capable of breaking
-			>	the deep space cells open. Once a cell is breached, the prisoners will
-			>	escape and attempt to enter the transport.
+			>	Para recoger a los prisioneros, estarás escoltando este transporte Obish
+			>   de velocidad sublumínica. Está armado con láseres defensivos mínimos capaces de abrir
+			>   las celdas en el espacio profundo. Una vez que se abra una celda, los prisioneros
+			>   escaparán e intentarán ingresar al transporte.
 			>
-			>	The Obish prisoners will be vulnerable to your weapons fire, since your
-			>	targeting systems will not be keyed to their suits. Be careful not to
-			>	catch them in crossfire. They will also be disoriented, so give them
-			>	plenty of time to enter the transport.
+			>	Los prisioneros Obish serán vulnerables al fuego de tus armas, ya que tus sistemas
+			>   de apuntado no estarán ajustados a sus trajes. Ten cuidado de no atraparlos en el fuego
+			>   cruzado. También estarán desorientados, así que dales suficiente tiempo para ingresar al
+			>   transporte.
 	*	initial:  3
-		title:    "Cell 1"
+		title:    "Celda 1"
 		content:
-			>	There are three deep space cells, each holding five Obiards. Command the
-			>	transport to each cell in turn, then allow it to break open the cell and
-			>	pick up the prisoners. The cells will be guarded, and your transport
-			>	will need protection.
+			>	Hay tres celdas en el espacio profundo, cada una con cinco Obiards. Ordena al
+			>   transporte que vaya a cada celda sucesivamente, y luego permítele abrir la celda
+			>   y recoger a los prisioneros. Las celdas estarán custodiadas y tu transporte
+			>   necesitará protección.
 	*	initial:  0
-		title:    "Passenger Liner"
+		title:    "Nave de pasajeros"
 		content:
-			>	The transport can carry all five Obiards contained in a deep space cell.
-			>	When the transport has picked up the prisoners at a cell, command it to
-			>	return to this waiting Obish passenger liner. The Obiards will exit the
-			>	transport and enter the liner.
-	*	title:  "Elysium System"
+			>	El transporte puede llevar a los cinco Obiards contenidos en una celda en el
+			>   espacio profundo. Cuando el transporte haya recogido a los prisioneros en una
+			>   celda, ordénale que regrese a este transatlántico de pasajeros Obish en espera.
+			>   Los Obiards saldrán del transporte y entrarán a la nave.
+
+	*	title:  "Sistema Elysium"
 		content:
-			>	In addition to the ships guarding the cells, there are several squadrons
-			>	of Gaitori fighters and cruisers on maneuvers in the vicinity. You
-			>	should monitor the transport's position closely, as enemy cruisers could
-			>	appear and quickly overtake the transport at any time. Don’t stray too
-			>	far from the transport’s side.
+			>	Además de las naves que custodian las celdas, hay varios escuadrones de cazas
+			>   y cruceros Gaitori maniobrando en las cercanías. Deberás monitorear de cerca
+			>   la posición del transporte, ya que los cruceros enemigos podrían aparecer y
+			>   alcanzar rápidamente al transporte en cualquier momento. No te alejes demasiado
+			>   del transporte.
 	*	initial:  6
-		title:    "Escort"
+		title:    "Escolta"
 		content:
-			>	An Obish cruiser will escort the transport. It is under the command of
-			>	the Obiards, so it will not be available for you to control.
+			>	Un crucero Obish escoltará al transporte. Está bajo el mando de los Obiards,
+			>   por lo que no estará disponible para que lo controles.
 	*	title:  "Elysium System"
 		content:
-			>	For the mission to be considered successful, you must rescue at least
-			>	eleven of the fifteen total hostages. Good luck.
+			>	Para que la misión se considere exitosa, debes rescatar al menos once de los
+			>   quince rehenes totales. Buena suerte.
 starmap:  {left: 444, top: 247, right: 476, bottom: 271}
 par:
 	time:    "12m"
 	kills:   25
 	losses:  0
 no_ships:
-	>	You lost your ships without rescuing enough Obiards.
+	>	Perdiste tus naves sin rescatar suficientes Obiards.
