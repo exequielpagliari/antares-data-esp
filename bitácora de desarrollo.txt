@@ -7,7 +7,16 @@
            -    Detección de falla en representación de caracteres especiales del idioma español ej: íóáñ.
            
 17/07/2023:
-           -    Obtenida solución de representación de caracteres especiales.
+           -    Obtenida solución de representación de caracteres especiales, por parte de sfiera (https://github.com/sfiera).
 18/07/2023:
            -    Traducción de segundo nivel.
+           
+19/07/2023:
+           -    Traducido tercer y segundo nivel.
+           -    Se consiguió solución a Strings que estaban introducidos en el código, por parte de sfiera (https://github.com/sfiera).
+           -    Prueba de traducción de Hud.
+
+20/07/2023:
+           -    Rebase del repositorio de antares-data-esp a nueva versión.
+           -    Traducción de Hud izquierdo.
            
