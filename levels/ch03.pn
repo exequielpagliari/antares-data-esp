@@ -107,11 +107,11 @@ briefings:
 		    >   Nuestro éxito en el Sistema Myrmidon ha tomado por sorpresa a los Gaitori.
 		    >   Lo último que esperaban era una ofensiva iniciada por la Armada Estelar Ishiman.
 		    >   Tu agresividad instintiva te ha servido bien.
-            >
-            >   Tu objetivo en el Sistema Demeter es aprovechar el desorden de los Gaitori al
-            >   apoderarte de uno de sus puestos avanzados en el planeta que amenaza nuestro
-            >   espacio. Esta es una oportunidad para demostrar la capacidad de coordinar un
-            >   asalto espacial a superficie.
+		    >
+		    >   Tu objetivo en el Sistema Demeter es aprovechar el desorden de los Gaitori al
+		    >   apoderarte de uno de sus puestos avanzados en el planeta que amenaza nuestro
+		    >   espacio. Esta es una oportunidad para demostrar la capacidad de coordinar un
+		    >   asalto espacial a superficie.
 	*	initial:  1
 		title:    "Crusero"
 		content:
@@ -123,31 +123,31 @@ briefings:
 		content:
 			>   Debes proteger nuestra base en Demeter Alpha de los transportes enemigos.
 			>   Si un transporte Gaitori aterriza en Alpha, la misión será abortada.
-            >
-            >   La base en Alpha puede producir dos tipos de naves además de los cruceros.
-            |   ^Pish/fighter^Los cazas son rápidos, pero solo pueden viajar a velocidades
-            >   sublumínicas. Su única arma son los cañones de haz fotocinético.
+			>   
+			>   La base en Alpha puede producir dos tipos de naves además de los cruceros.
+			|   ^Pish/fighter^Los cazas son rápidos, pero solo pueden viajar a velocidades
+			>   sublumínicas. Su única arma son los cañones de haz fotocinético.
 	*	initial:  0
 		title:    "Demeter Alpha"
 		content:
 			>   ^Pish/transport^El transporte es la única nave capaz de realizar un asalto
 			>   espacial a superficie. Están limitados a viajar a velocidades sublumínicas
 			>   y no están armados.
-            >
-            >   Para esta misión, deberás darle órdenes a un transporte para que vaya a
-            >   Demeter Beta. Intentará aterrizar una vez que llegue.
+			>   
+			>   Para esta misión, deberás darle órdenes a un transporte para que vaya a
+			>   Demeter Beta. Intentará aterrizar una vez que llegue.
 	*	initial:  5
 		title:    "Demeter Beta"
 		content:
 			>   Este planeta es tu objetivo. Aterriza un transporte aquí para completar
 			>   la misión.
-
-            >   La base aquí puede producir cuatro tipos de naves.
+			>   
+			>   La base aquí puede producir cuatro tipos de naves.
 	*	initial:  5
 		title:    "Demeter Beta"
 		content:
 			>   ^Pgai/fighter^Los cazas Gaitori son lentos y tienen una armadura pobre.
-            |   ^Pgai/cruiser^Ya has encontrado varios de sus cruceros.
+			|   ^Pgai/cruiser^Ya has encontrado varios de sus cruceros.
 	*	initial:  5
 		title:    "Demeter Beta"
 		content:
