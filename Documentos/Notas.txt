@@ -14,3 +14,18 @@ prologue:	---> Inicia un Prólogo visual
 	    |	\i         ---> Retorno
 	    |	#+gai/race ---> Imagen
 	    |              ---> Inicio de párrafo
+	    
+	    
+
+/interfaces/options/keys.pn:
+
+	    text:
+			>	To change a key control, click on its button. Any key you then press
+			>	will be assigned to that function. The next button will automatically be
+			>	selected. <ESC>, <RETURN>, and <CAPS LOCK> are pre-assigned and cannot
+			>	be used.
+			
+			
+			
+Para asignar una tecla, haz clic encima del botón. Cualquier tecla que presiones a continuación se asignará a esa función. El siguiente valor se seleccionará automáticamente. <ESC>, <RETURN> y <CAPS LOCK> ya están preasignados y no pueden usarse.
+

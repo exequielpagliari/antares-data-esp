@@ -19,4 +19,5 @@
 20/07/2023:
            -    Rebase del repositorio de antares-data-esp a nueva versión.
            -    Traducción de Hud izquierdo.
+           -    Traducción de las configuraciones.
            
