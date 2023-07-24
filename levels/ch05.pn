@@ -1,8 +1,8 @@
 type:     "solo"
 chapter:  8
 title:
-	>	\i Chapter 5 
-	|	\iOut of the Frying Pan...
+	>	\i Capítulo 5
+	|	\iDe mal en peor... 
 players:
 	*	type:           "human"
 		race:           "ish"
@@ -77,7 +77,7 @@ conditions:
 			*	type:    "win"
 				player:  1
 				text:
-					>	Our base on Aeneas Alpha was captured by the Gaitori.
+					>	Nuestra base en Aeneas Alpha fue capturada por los Gaitori.
 	*	when:
 			type:    "owner"
 			op:      "eq"
@@ -89,70 +89,73 @@ conditions:
 				player:  0
 				next:    "ch06"
 				text:
-					>	You captured Aeneas Beta.
+					>	Tú capturaste Aeneas Beta.
 briefings:
-	*	title:  "Aeneas System"
+	*	title:  "Sistema Aeneas"
 		content:
-			>	The Gaitori defeat in the Demeter system effectively ended their potency
-			>	near Ishiman space; now we must take the battle to them.
+			>	La derrota de los Gaitori en el sistema Demeter efectivamente puso 
+			>	fin a su potencial cerca del espacio Ishiman; ahora debemos llevar 
+			>	la batalla a ellos. 
 			>
-			>	We traced the jumpstream from Elysium to here, the Aeneas system. We
-			>	believe it's the primary base of operations for the Cantharan-loyal
-			>	military.
+			>	Hemos trazado la ruta de salto espacial desde Elysium hasta aquí, 
+			>	el sistema Aeneas. Creemos que es la base de operaciones principal 
+			>	para el ejército leal a Cantharan. 
 			>
-			>	Your mission is to occupy their base, and to rout them from the system.
+			>	Tu misión es ocupar su base y expulsarlos del sistema. 
 	*	initial:  0
 		title:    "Cruiser"
 		content:
-			>	^Pish/cruiser^You'll start in a single standard cruiser, but you'll be
-			>	able to build more.
+			>	^Pish/cruiser^Comenzarás con un solo crucero estándar, pero podrás construir más. 
 	*	initial:  8
 		title:    "Aeneas Beta"
 		content:
-			>	The Gaitori have a planet base on Aeneas Beta, one of the two planets in
-			>	the system. Their planet is defended by a flak drone.
-			|	^Ploc/flak^Flak drones are indestructible. In addition to having guided
-			>	rockets, they can fire deadly flak over a wide area. The only way to
-			>	gain control of a flak drone is with an engineering pod.
+			>	Los Gaitori tienen una base planetaria en Aeneas Beta, uno de 
+			>	los dos planetas del sistema. Su planeta está defendido por un 
+			>	dron flak. 
+			|	^Ploc/flak^Los drones Flak son indestructibles. Además de tener cohetes guiados, pueden 
+			>	disparar munición mortal en un área amplia. La única forma de 
+			>	tomar el control de un dron flak es con una cápsula 
+			>	de ingeniería. 
 	*	initial:  1
 		title:    "Aeneas Alpha"
 		content:
-			>	You'll be coordinating the assault from our base on Aeneas Alpha.
+			>	Coordinarás el asalto desde nuestra base en Aeneas Alpha.
 	*	initial:  1
 		title:    "Aeneas Alpha"
 		content:
-			>	^Pish/engineer^In addition to fighters, cruisers, and transports, our
-			>	base can produce engineering pods. Send these robot ships to flak drones
-			>	to gain control of them. Once an engineering pod reaches a flak drone,
-			>	the drone will be configured to fire on enemy ships.
+			>	^Pish/engineer^Además de cazas, cruceros y transportes, nuestra base puede producir cápsulas 
+			>	de ingeniería. Envía estas naves robot a los drones flak para 
+			>	tomar el control de ellos. Una vez que una cápsula de 
+			>	ingeniería llega a un dron flak, el dron se configurará para 
+			>	disparar a las naves enemigas.
 			>
-			>	The engineering pods are equipped with defensive lasers, capable of
-			>	protecting them briefly from missiles and enemy ships. The pods are
-			>	invisible to the flak drones' sensors, but they are still susceptible to
-			>	weapons fire.
+			>	Las cápsulas de ingeniería están equipadas con láseres defensivos, capaces de 
+			>	protegerlas brevemente de misiles y naves enemigas. Las cápsulas son invisibles 
+			>	para los sensores de los drones flak, pero aún son susceptibles 
+			>	al fuego de armas. 
 	*	initial:  8
 		title:    "Aeneas Beta"
 		content:
-			>	The Gaitori base on Beta is your objective. Land a transport here to
-			>	complete the mission.
-			|	^Pgai/engineer^The Gaitori can also make fighters, cruisers, transports
-			>	and engineering pods. Their engineering pods also have defensive lasers.
+			>	La base Gaitori en Beta es tu objetivo. Aterriza un transporte 
+			>	aquí para completar la misión. 
+			|	^Pgai/engineer^Los Gaitori también pueden fabricar cazas, cruceros, transportes y cápsulas de 
+			>	ingeniería. Sus cápsulas de ingeniería también tienen láseres defensivos. 
 	*	initial:  6
 		title:    "Flak Drone"
 		content:
-			>	^Ploc/flak^There's a flak drone positioned directly between the two
-			>	planets of Aeneas. You may want to send an engineering pod to this drone
-			>	first in order to prevent it from firing on any of your transports on
-			>	their way to Beta.
+			>	^Ploc/flak^Hay un dron flak posicionado directamente entre los dos planetas de 
+			>	Aeneas. Es posible que desees enviar primero una cápsula de ingeniería 
+			>	a este dron para evitar que dispare contra alguno de tus 
+			>	transportes en su camino hacia Beta. 
 	*	initial:  5
 		title:    "Heavy Destroyer"
 		content:
-			>	^Pgai/hvd^There's a Gaitori heavy destroyer currently over Beta.
-			>	Compared to our cruisers, it is an extremely dangerous ship.
+			>	^Pgai/hvd^Hay un destructor pesado Gaitori posicionado sobre Beta en este momento. 
+			>	Comparado con nuestros cruceros, es una nave extremadamente peligrosa.
 starmap:  {left: 350, top: 238, right: 382, bottom: 262}
 par:
 	time:    "7m"
 	kills:   15
 	losses:  15
 no_ships:
-	>	You lost all of your ships, and failed to repel the Gaitori Military.
+	>	Perdiste todas tus naves y no pudiste repeler al ejército Gaitori.
