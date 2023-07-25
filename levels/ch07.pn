@@ -1,8 +1,8 @@
 type:     "solo"
 chapter:  10
 title:
-	>	\i Chapter 7 
-	|	\iOn the Rocks
+	>	\i Capítulo 7 
+	|	\iEn las Rocas
 players:
 	*	type:  "human"
 		race:  "ish"
